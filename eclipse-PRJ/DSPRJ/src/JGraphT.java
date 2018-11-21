@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.DefaultUndirectedWeightedGraph;
 
 
 // ToDo : Make All Nodes - Till 11/19
@@ -16,8 +17,8 @@ public class JGraphT {
 	private static JNode node;
 	public static void main(String[] main) {
 		node = new JNode();
-		DefaultDirectedGraph<String, DefaultEdge> directedGraph 
-		  = new DefaultDirectedGraph<>(DefaultEdge.class);
+		DefaultUndirectedWeightedGraph<String, DefaultEdge> directedGraph 
+		  = new DefaultUndirectedWeightedGraph<>(DefaultEdge.class);
 		//Set All nodes to Graph
 		for(Iterator iter = node.getNodesKey().iterator(); iter.hasNext();) {
 			String keyName = (String)iter.next();
