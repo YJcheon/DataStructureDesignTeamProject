@@ -20,11 +20,13 @@ public class JGraphT {
 		DefaultUndirectedWeightedGraph<String, DefaultEdge> directedGraph 
 		  = new DefaultUndirectedWeightedGraph<>(DefaultEdge.class);
 		//Set All nodes to Graph
+		int count = 0;
 		for(Iterator iter = node.getNodesKey().iterator(); iter.hasNext();) {
 			String keyName = (String)iter.next();
 			directedGraph.addVertex(keyName);
-			System.out.println(keyName);
+			count++;
 		}
+		System.out.println("total " + String.valueOf(count) + "node added");
 		// ToDo : Set Edges in same Floor
 		// ToDo : Set Edges in Elevator & stairs
 	}
