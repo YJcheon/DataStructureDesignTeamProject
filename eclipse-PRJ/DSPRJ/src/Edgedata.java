@@ -8,7 +8,7 @@ import java.util.Set;
 // All About Nodes
 // Control Flow of All nodes
 
-public class JNode {
+/*public class JNode {
 	private static HashMap<String, NodeData> node;
 	public JNode() {
 		node = new HashMap<String, NodeData>();
@@ -51,3 +51,4 @@ public class JNode {
 	}
 	
 }
+*/
