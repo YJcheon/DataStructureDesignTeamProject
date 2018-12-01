@@ -112,8 +112,24 @@ public class JNode {
 		return node.keySet();
 	}
 	
-	// ToDo : Return Elevator Nodes
-	// ToDo : Return Stair Nodes
+	// Return Elevator Nodes
+	public HashMap<String, ArrayList<String>> getElevNodes() {
+		HashMap<String, ArrayList<String>> ret = new HashMap<>();
+		for (String elevKey : elevator.keySet()) {
+			ArrayList<String> elevList = elevator.get(elevKey).getFloorIdx();
+			ret.put(elevKey, elevList);
+		}
+		return ret;
+	}
+	// Return Stair Nodes
+	public HashMap<String, ArrayList<String>> getStairNodes() {
+		HashMap<String, ArrayList<String>> ret = new HashMap<>();
+		for (String stairKey : stairs.keySet()) {
+			ArrayList<String> stairList = stairs.get(stairKey).getFloorIdx();
+			ret.put(stairKey, stairList);
+		}
+		return ret;
+	}
 	
 	// Search By Floor
 	public ArrayList<String> getNodesByFloor(String floorName) {
@@ -139,12 +155,21 @@ public class JNode {
 		return ret;
 	}
 	
+	// Check whether this node exist or not
+	public boolean isThisNodeExist(String nodeIdx) {
+		if (node.get(nodeIdx) != null) return true;
+		return false;
+	}
+	
 	// Return Specific Node's Name
 	public String getNodeName(String nodeIdx) {
+		if (!isThisNodeExist(nodeIdx)) return null; 
 		return node.get(nodeIdx).getName();
 	}
+	
 	// Return Specific Node's Type
 	public int getNodeType(String nodeIdx) {
+		if (!isThisNodeExist(nodeIdx)) return -1;
 		return node.get(nodeIdx).getType();
 	}
 	
