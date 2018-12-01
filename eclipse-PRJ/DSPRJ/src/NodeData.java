@@ -3,6 +3,7 @@ public class NodeData {
 	private String nodeIdx;
 	private String nodeName;
 	private int nodeType;
+	private String nodeGroup;
 	//Will be Added later
 	//private int nodeX;
 	//private int nodeY;
@@ -10,6 +11,7 @@ public class NodeData {
 		nodeIdx = new String(idx);
 		nodeName = new String(idx);
 		nodeType = type;
+		nodeGroup = "";
 	}
 	public NodeData(String idx, String name, int type) {
 		nodeIdx = new String(idx);
@@ -25,5 +27,11 @@ public class NodeData {
 	}
 	public int getType() {
 		return nodeType;
+	}
+	public String getGroup() {
+		return nodeGroup;
+	}
+	public void setGroup(String nodeGroup) {
+		this.nodeGroup = nodeGroup;
 	}
 }
