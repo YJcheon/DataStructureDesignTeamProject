@@ -114,7 +114,30 @@ public class JNode {
 	
 	// ToDo : Return Elevator Nodes
 	// ToDo : Return Stair Nodes
-	// ToDO : Search By Floor
+	
+	// Search By Floor
+	public ArrayList<String> getNodesByFloor(String floorName) {
+		ArrayList<String> ret = new ArrayList<>();
+		for(String nodeKey : node.keySet()) {
+			NodeData tmp = node.get(nodeKey);
+			if (floorName.equals(tmp.getIdx().substring(0,2))) {
+				ret.add(tmp.getIdx());
+			}
+		}
+		return ret;
+	}
+	
+	// Return Specific Group Nodes
+	public ArrayList<String> getNodesByGroup(String groupName) {
+		ArrayList<String> ret = new ArrayList<>();
+		for(String nodeKey : node.keySet()) {
+			NodeData tmp = node.get(nodeKey);
+			if (groupName.equals(tmp.getGroup())) {
+				ret.add(tmp.getIdx());
+			}
+		}
+		return ret;
+	}
 	
 	// Return Specific Node's Name
 	public String getNodeName(String nodeIdx) {
