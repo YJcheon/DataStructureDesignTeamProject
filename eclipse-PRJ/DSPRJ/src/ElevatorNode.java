@@ -13,7 +13,8 @@ public class ElevatorNode{
 	private int people;
 	private int now;
 	private int dir;
-	public ElevatorNode(String idx, String name, int nop, int direction, int nowFloor) {
+	private int user; //사용자의 인원수를 바탕으로 EV필터링
+	public ElevatorNode(String idx, String name, int nop, int direction, int nowFloor, int userNum) {
 		this.idx = idx;
 		this.name = name;
 		this.sharedFloor = new ArrayList<>();
@@ -197,7 +198,12 @@ public class ElevatorNode{
 	         time = (gap(now, sf) + gap(sf, df)) * moveT + 15;
 	         return time;
 	      }
-	      
+	      if(user == 1 && people >10) {
+	    	  return -1;
+	      }
+	      if(user == 2 && people > 0) {
+	    	  return -1;
+	      }
 	      if(userDir == 1 && Full == 1) {
 	         if(dir == 1 && now > sf)
 	            CASE = 1;
