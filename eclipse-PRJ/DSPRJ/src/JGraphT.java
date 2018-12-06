@@ -90,6 +90,10 @@ public class JGraphT {
 		testing();
 	}
 	private static void testing() {
+		//아래 코드 위치 불확실. 랜덤데이터 추출 및 ev weight 제공 코드
+		//public ElevatorNode(String idx, String name, int nop, int direction, int nowFloor, int userNum)
+		
+		
 		Scanner scan = new Scanner(System.in);
 		String msg = new String();
 		String source, dest;
