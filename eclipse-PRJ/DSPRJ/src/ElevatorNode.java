@@ -14,7 +14,7 @@ public class ElevatorNode{
 	private int now;
 	private int dir;
 	private int user; //사용자의 인원수를 바탕으로 EV필터링
-	public ElevatorNode(String idx, String name, int nop, int direction, int nowFloor, int userNum) {
+	public void setter(String idx, String name, int nop, int direction, int nowFloor, int userNum) {
 		this.idx = idx;
 		this.name = name;
 		this.sharedFloor = new ArrayList<>();
