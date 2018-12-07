@@ -8,12 +8,21 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 public class Input {
+	protected String Start; //출발지
+	protected String Desti; //도착지
 	protected int userNum;
 	protected String busy;
 	private int sensorDir[] = new int[12];
 	private int sensorNow[] = new int[12];
 	private int sensorPeople[] = new int[12];
 	
+	public void setStart(String Start) {
+		this.Start = Start;
+	}
+	
+	public void setDesti(String Desti) {
+		this.Desti = Desti;
+	}
 	
 	public void setUserNum(int userNum) {
 		this.userNum = userNum;		
