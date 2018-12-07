@@ -7,8 +7,6 @@ import java.util.Set;
 import java.util.Calendar;
 import java.util.Scanner;
 
-// All About Nodes
-// Control Flow of All nodes
 
 public class SensorReceiver {
 	private int dir[] = new int[12];
