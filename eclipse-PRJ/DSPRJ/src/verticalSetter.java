@@ -15,7 +15,6 @@ public class verticalSetter {
 	static DefaultUndirectedWeightedGraph<String, DefaultEdge> undirectedGraph;
 	public void evSetter(ElevatorNode [] cal, int up_down) {
 		if(up_down == 1) {
-			//1È£±â
 			DefaultEdge evEdge010103 = undirectedGraph.addEdge("EV0101", "EV0103");
 			undirectedGraph.setEdgeWeight(evEdge010103, cal[0].weightGiver(1, 3));
 			DefaultEdge evEdge010105 = undirectedGraph.addEdge("EV0101", "EV0105");
