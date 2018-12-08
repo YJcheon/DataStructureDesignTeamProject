@@ -15,10 +15,7 @@ public class verticalSetter {
 	static DefaultUndirectedWeightedGraph<String, DefaultEdge> undirectedGraph;
 	public void evSetter(ElevatorNode [] cal, int up_down) {
 		if(up_down == 1) {
-<<<<<<< HEAD
-=======
-			//1ȣ��
->>>>>>> 7eed4ca0d4326decd4670068e4a2590099abbe4b
+			//1호기
 			DefaultEdge evEdge010103 = undirectedGraph.addEdge("EV0101", "EV0103");
 			undirectedGraph.setEdgeWeight(evEdge010103, cal[0].weightGiver(1, 3));
 			DefaultEdge evEdge010105 = undirectedGraph.addEdge("EV0101", "EV0105");
@@ -40,7 +37,7 @@ public class verticalSetter {
 			DefaultEdge evEdge010709 = undirectedGraph.addEdge("EV0107", "EV0109");
 			undirectedGraph.setEdgeWeight(evEdge010709, cal[0].weightGiver(7, 9));
 			
-			//2ȣ��
+			//2호기
 			DefaultEdge evEdge020102 = undirectedGraph.addEdge("EV0201", "EV0202");
 			undirectedGraph.setEdgeWeight(evEdge020102, cal[1].weightGiver(1, 2));
 			DefaultEdge evEdge020104 = undirectedGraph.addEdge("EV0201", "EV0204");
@@ -62,7 +59,7 @@ public class verticalSetter {
 			DefaultEdge evEdge020608 = undirectedGraph.addEdge("EV0206", "EV0208");
 			undirectedGraph.setEdgeWeight(evEdge020608, cal[1].weightGiver(6, 8));
 			
-			//3ȣ��
+			//3호기
 			DefaultEdge evEdge03B6B5 = undirectedGraph.addEdge("EV03B6", "EV03B5");
 			undirectedGraph.setEdgeWeight(evEdge03B6B5, cal[2].weightGiver(-6, -5));
 			DefaultEdge evEdge03B6B4 = undirectedGraph.addEdge("EV03B6", "EV03B4");
@@ -136,7 +133,7 @@ public class verticalSetter {
 			DefaultEdge evEdge030709 = undirectedGraph.addEdge("EV0307", "EV0309");
 			undirectedGraph.setEdgeWeight(evEdge030709, cal[2].weightGiver(7, 9));
 		
-			//4ȣ��
+			//4호기
 			DefaultEdge evEdge04B6B5 = undirectedGraph.addEdge("EV04B6", "EV04B5");
 			undirectedGraph.setEdgeWeight(evEdge04B6B5, cal[3].weightGiver(-6, -5));
 			DefaultEdge evEdge04B6B4 = undirectedGraph.addEdge("EV04B6", "EV04B4");
@@ -194,7 +191,7 @@ public class verticalSetter {
 			DefaultEdge evEdge040608 = undirectedGraph.addEdge("EV0406", "EV0408");
 			undirectedGraph.setEdgeWeight(evEdge040608, cal[3].weightGiver(6, 8));
 			
-			//5ȣ��
+			//5호기
 			DefaultEdge evEdge05B6B5 = undirectedGraph.addEdge("EV05B6", "EV05B5");
 			undirectedGraph.setEdgeWeight(evEdge05B6B5, cal[4].weightGiver(-6, -5));
 			DefaultEdge evEdge05B6B4 = undirectedGraph.addEdge("EV05B6", "EV05B4");
@@ -406,7 +403,7 @@ public class verticalSetter {
 			DefaultEdge evEdge050809 = undirectedGraph.addEdge("EV0508", "EV0509");
 			undirectedGraph.setEdgeWeight(evEdge050809, cal[4].weightGiver(8, 9));
 			
-			//6ȣ��
+			//6호기
 			DefaultEdge evEdge06B3B2 = undirectedGraph.addEdge("EV06B3", "EV06B2");
 			undirectedGraph.setEdgeWeight(evEdge06B3B2, cal[5].weightGiver(-3, -2));
 			DefaultEdge evEdge06B3B1 = undirectedGraph.addEdge("EV06B3", "EV06B1");
@@ -632,7 +629,7 @@ public class verticalSetter {
 			undirectedGraph.setEdgeWeight(evEdge061112, cal[5].weightGiver(11, 12));
 
 			
-			//7ȣ��
+			//7호기
 			DefaultEdge evEdge07B3B2 = undirectedGraph.addEdge("EV07B3", "EV07B2");
 			undirectedGraph.setEdgeWeight(evEdge07B3B2, cal[6].weightGiver(-3, -2));
 			DefaultEdge evEdge07B3B1 = undirectedGraph.addEdge("EV07B3", "EV07B1");
@@ -697,7 +694,7 @@ public class verticalSetter {
 			undirectedGraph.setEdgeWeight(evEdge070912, cal[6].weightGiver(9, 12));
 		}
 		else if(up_down == -1) {
-			//1ȣ��
+			//1호기
 			DefaultEdge evEdge010301 = undirectedGraph.addEdge("EV0101", "EV0103");
 			undirectedGraph.setEdgeWeight(evEdge010301, cal[0].weightGiver(3, 1));
 			DefaultEdge evEdge010501 = undirectedGraph.addEdge("EV0101", "EV0105");
@@ -720,7 +717,7 @@ public class verticalSetter {
 			undirectedGraph.setEdgeWeight(evEdge010907, cal[0].weightGiver(9, 7));
 			
 			
-			//2ȣ��
+			//2호기
 			DefaultEdge evEdge020102 = undirectedGraph.addEdge("EV0201", "EV0202");
 			undirectedGraph.setEdgeWeight(evEdge020102, cal[1].weightGiver(2, 1));
 			DefaultEdge evEdge020104 = undirectedGraph.addEdge("EV0201", "EV0204");
@@ -742,7 +739,7 @@ public class verticalSetter {
 			DefaultEdge evEdge020608 = undirectedGraph.addEdge("EV0206", "EV0208");
 			undirectedGraph.setEdgeWeight(evEdge020608, cal[1].weightGiver(8, 6));
 			
-			//3ȣ��
+			//3호기
 			DefaultEdge evEdge03B6B5 = undirectedGraph.addEdge("EV03B6", "EV03B5");
 			undirectedGraph.setEdgeWeight(evEdge03B6B5, cal[2].weightGiver(-5, -6));
 			DefaultEdge evEdge03B6B4 = undirectedGraph.addEdge("EV03B6", "EV03B4");
@@ -817,7 +814,7 @@ public class verticalSetter {
 			undirectedGraph.setEdgeWeight(evEdge030709, cal[2].weightGiver(9, 7));
 		
 			
-			//4ȣ��
+			//4호기
 			DefaultEdge evEdge04B6B5 = undirectedGraph.addEdge("EV04B6", "EV04B5");
 			undirectedGraph.setEdgeWeight(evEdge04B6B5, cal[3].weightGiver(-5, -6));
 			DefaultEdge evEdge04B6B4 = undirectedGraph.addEdge("EV04B6", "EV04B4");
@@ -875,7 +872,7 @@ public class verticalSetter {
 			DefaultEdge evEdge040608 = undirectedGraph.addEdge("EV0406", "EV0408");
 			undirectedGraph.setEdgeWeight(evEdge040608, cal[3].weightGiver(8, 6));
 			
-			//5ȣ��
+			//5호기
 			DefaultEdge evEdge05B6B5 = undirectedGraph.addEdge("EV05B6", "EV05B5");
 			undirectedGraph.setEdgeWeight(evEdge05B6B5, cal[4].weightGiver(-5, -6));
 			DefaultEdge evEdge05B6B4 = undirectedGraph.addEdge("EV05B6", "EV05B4");
@@ -1087,7 +1084,7 @@ public class verticalSetter {
 			DefaultEdge evEdge050809 = undirectedGraph.addEdge("EV0508", "EV0509");
 			undirectedGraph.setEdgeWeight(evEdge050809, cal[4].weightGiver(9, 8));
 			
-			//6ȣ��
+			//6호기
 			DefaultEdge evEdge06B3B2 = undirectedGraph.addEdge("EV06B3", "EV06B2");
 			undirectedGraph.setEdgeWeight(evEdge06B3B2, cal[5].weightGiver(-2, -3));
 			DefaultEdge evEdge06B3B1 = undirectedGraph.addEdge("EV06B3", "EV06B1");
@@ -1312,7 +1309,7 @@ public class verticalSetter {
 			DefaultEdge evEdge061112 = undirectedGraph.addEdge("EV0611", "EV0612");
 			undirectedGraph.setEdgeWeight(evEdge061112, cal[5].weightGiver(12, 11));
 
-			//7ȣ��
+			//7호기
 			DefaultEdge evEdge07B3B2 = undirectedGraph.addEdge("EV07B3", "EV07B2");
 			undirectedGraph.setEdgeWeight(evEdge07B3B2, cal[6].weightGiver(-2, -3));
 			DefaultEdge evEdge07B3B1 = undirectedGraph.addEdge("EV07B3", "EV07B1");
@@ -1616,6 +1613,4 @@ public class verticalSetter {
 
 			
 	}
-}
-
 }
