@@ -3,6 +3,11 @@ import java.util.ArrayList;
 // ToDo : Input Sensor Data
 // ToDo : Elevator Structure design Needed
 public class ElevatorNode{
+	ElevatorNode(String idx1, String idx2){
+		this.idx = idx1; this.name = idx2;
+		}
+	ElevatorNode(){
+	}
 	// private int curFloor;
 	private ArrayList<String> sharedFloor;
 	private int[] floor;

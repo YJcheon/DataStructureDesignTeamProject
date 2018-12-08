@@ -124,8 +124,8 @@ public class JGraphT {
 		 evArr[8].setter("9", input.sensorPeople[8], input.sensorDir[8], input.sensorNow[8], input.userNum);
 		 evArr[9].setter("10", input.sensorPeople[9], input.sensorDir[9], input.sensorNow[9], input.userNum);
 		 evArr[10].setter("11", input.sensorPeople[10], input.sensorDir[10], input.sensorNow[10], input.userNum);
-		 evArr[11].setter("12", input.sensorPeople[11], input.sensorDir[11], input.sensorNow[11], input.userNum);​
-		
+		 //evArr[11].setter("12", input.sensorPeople[11], input.sensorDir[11], input.sensorNow[11], input.userNum);​
+		 
 		 verticalSetter vSet = new verticalSetter();
 		 vSet.evSetter(evArr, input.dFloor-input.sFloor);
 		
