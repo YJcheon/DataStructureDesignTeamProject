@@ -44,7 +44,7 @@ public class JNode {
 			line = br.readLine();
 			while ((line = br.readLine()) != null) {
 				String[] token = line.split(",");
-				ElevatorNode newElev = new ElevatorNode(token[0], token[1]);
+				ElevatorNode newElev = new ElevatorNode();
 				for ( int i = 3; i < token.length; i++) {
 					String newFloor = token[i];
 					if (i == 3) newFloor = newFloor.substring(1);
@@ -68,7 +68,7 @@ public class JNode {
 			line = br.readLine();
 			while ((line = br.readLine()) != null) {
 				String[] token = line.split(",");
-				ElevatorNode newStair = new ElevatorNode(token[0], token[1]);
+				ElevatorNode newStair = new ElevatorNode();
 				for ( int i = 3; i < token.length - 1; i++) {
 					String newFloor = token[i];
 					if (i == 3) newFloor = newFloor.substring(1);

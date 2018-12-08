@@ -14,11 +14,8 @@ import java.util.Set;
 public class verticalSetter {
 	static DefaultUndirectedWeightedGraph<String, DefaultEdge> undirectedGraph;
 	public void evSetter(ElevatorNode [] cal, int up_down) {
-		if(up_down == 1) {
-<<<<<<< HEAD
-=======
-			//1ȣ��
->>>>>>> 7eed4ca0d4326decd4670068e4a2590099abbe4b
+		
+		if(up_down > 0) {	
 			DefaultEdge evEdge010103 = undirectedGraph.addEdge("EV0101", "EV0103");
 			undirectedGraph.setEdgeWeight(evEdge010103, cal[0].weightGiver(1, 3));
 			DefaultEdge evEdge010105 = undirectedGraph.addEdge("EV0101", "EV0105");
@@ -40,7 +37,7 @@ public class verticalSetter {
 			DefaultEdge evEdge010709 = undirectedGraph.addEdge("EV0107", "EV0109");
 			undirectedGraph.setEdgeWeight(evEdge010709, cal[0].weightGiver(7, 9));
 			
-			//2ȣ��
+			//2호占쏙옙
 			DefaultEdge evEdge020102 = undirectedGraph.addEdge("EV0201", "EV0202");
 			undirectedGraph.setEdgeWeight(evEdge020102, cal[1].weightGiver(1, 2));
 			DefaultEdge evEdge020104 = undirectedGraph.addEdge("EV0201", "EV0204");
@@ -62,7 +59,7 @@ public class verticalSetter {
 			DefaultEdge evEdge020608 = undirectedGraph.addEdge("EV0206", "EV0208");
 			undirectedGraph.setEdgeWeight(evEdge020608, cal[1].weightGiver(6, 8));
 			
-			//3ȣ��
+			//3호占쏙옙
 			DefaultEdge evEdge03B6B5 = undirectedGraph.addEdge("EV03B6", "EV03B5");
 			undirectedGraph.setEdgeWeight(evEdge03B6B5, cal[2].weightGiver(-6, -5));
 			DefaultEdge evEdge03B6B4 = undirectedGraph.addEdge("EV03B6", "EV03B4");
@@ -136,7 +133,7 @@ public class verticalSetter {
 			DefaultEdge evEdge030709 = undirectedGraph.addEdge("EV0307", "EV0309");
 			undirectedGraph.setEdgeWeight(evEdge030709, cal[2].weightGiver(7, 9));
 		
-			//4ȣ��
+			//4호占쏙옙
 			DefaultEdge evEdge04B6B5 = undirectedGraph.addEdge("EV04B6", "EV04B5");
 			undirectedGraph.setEdgeWeight(evEdge04B6B5, cal[3].weightGiver(-6, -5));
 			DefaultEdge evEdge04B6B4 = undirectedGraph.addEdge("EV04B6", "EV04B4");
@@ -194,7 +191,7 @@ public class verticalSetter {
 			DefaultEdge evEdge040608 = undirectedGraph.addEdge("EV0406", "EV0408");
 			undirectedGraph.setEdgeWeight(evEdge040608, cal[3].weightGiver(6, 8));
 			
-			//5ȣ��
+			//5호占쏙옙
 			DefaultEdge evEdge05B6B5 = undirectedGraph.addEdge("EV05B6", "EV05B5");
 			undirectedGraph.setEdgeWeight(evEdge05B6B5, cal[4].weightGiver(-6, -5));
 			DefaultEdge evEdge05B6B4 = undirectedGraph.addEdge("EV05B6", "EV05B4");
@@ -406,7 +403,7 @@ public class verticalSetter {
 			DefaultEdge evEdge050809 = undirectedGraph.addEdge("EV0508", "EV0509");
 			undirectedGraph.setEdgeWeight(evEdge050809, cal[4].weightGiver(8, 9));
 			
-			//6ȣ��
+			//6호占쏙옙
 			DefaultEdge evEdge06B3B2 = undirectedGraph.addEdge("EV06B3", "EV06B2");
 			undirectedGraph.setEdgeWeight(evEdge06B3B2, cal[5].weightGiver(-3, -2));
 			DefaultEdge evEdge06B3B1 = undirectedGraph.addEdge("EV06B3", "EV06B1");
@@ -632,7 +629,7 @@ public class verticalSetter {
 			undirectedGraph.setEdgeWeight(evEdge061112, cal[5].weightGiver(11, 12));
 
 			
-			//7ȣ��
+			//7호기
 			DefaultEdge evEdge07B3B2 = undirectedGraph.addEdge("EV07B3", "EV07B2");
 			undirectedGraph.setEdgeWeight(evEdge07B3B2, cal[6].weightGiver(-3, -2));
 			DefaultEdge evEdge07B3B1 = undirectedGraph.addEdge("EV07B3", "EV07B1");
@@ -695,9 +692,381 @@ public class verticalSetter {
 			
 			DefaultEdge evEdge070912 = undirectedGraph.addEdge("EV0709", "EV0712");
 			undirectedGraph.setEdgeWeight(evEdge070912, cal[6].weightGiver(9, 12));
+			
+			//8호기
+			DefaultEdge evEdge080105 = undirectedGraph.addEdge("EV0801", "EV0805");
+			undirectedGraph.setEdgeWeight(evEdge080105, cal[7].weightGiver(1, 5));
+			DefaultEdge evEdge080108 = undirectedGraph.addEdge("EV0801", "EV0808");
+			undirectedGraph.setEdgeWeight(evEdge080108, cal[7].weightGiver(1, 8));
+			DefaultEdge evEdge080111 = undirectedGraph.addEdge("EV0801", "EV0811");
+			undirectedGraph.setEdgeWeight(evEdge080111, cal[7].weightGiver(1, 11));
+			
+			DefaultEdge evEdge080508 = undirectedGraph.addEdge("EV0805", "EV0808");
+			undirectedGraph.setEdgeWeight(evEdge080508, cal[7].weightGiver(5, 8));
+			DefaultEdge evEdge080511 = undirectedGraph.addEdge("EV0805", "EV0811");
+			undirectedGraph.setEdgeWeight(evEdge080511, cal[7].weightGiver(5, 11));
+			
+			DefaultEdge evEdge080811 = undirectedGraph.addEdge("EV0808", "EV0811");
+			undirectedGraph.setEdgeWeight(evEdge080811, cal[7].weightGiver(8, 11));
+			
+			//9호기
+			DefaultEdge evEdge090104 = undirectedGraph.addEdge("EV0901", "EV0904");
+			undirectedGraph.setEdgeWeight(evEdge090104, cal[8].weightGiver(1, 4));
+			DefaultEdge evEdge090107 = undirectedGraph.addEdge("EV0901", "EV0907");
+			undirectedGraph.setEdgeWeight(evEdge090107, cal[8].weightGiver(1, 7));
+			DefaultEdge evEdge090110 = undirectedGraph.addEdge("EV0901", "EV0910");
+			undirectedGraph.setEdgeWeight(evEdge090110, cal[8].weightGiver(1, 10));
+			
+			DefaultEdge evEdge090407 = undirectedGraph.addEdge("EV0904", "EV0907");
+			undirectedGraph.setEdgeWeight(evEdge090407, cal[8].weightGiver(4, 7));
+			DefaultEdge evEdge090410 = undirectedGraph.addEdge("EV0904", "EV0910");
+			undirectedGraph.setEdgeWeight(evEdge090410, cal[8].weightGiver(4, 10));
+			
+			DefaultEdge evEdge090710 = undirectedGraph.addEdge("EV0907", "EV0910");
+			undirectedGraph.setEdgeWeight(evEdge090710, cal[8].weightGiver(7, 10));
+			
+			
+			//10호기
+			DefaultEdge evEdge10B3B2 = undirectedGraph.addEdge("EV10B3", "EV10B2");
+			undirectedGraph.setEdgeWeight(evEdge10B3B2, cal[9].weightGiver(-3, -2));
+			DefaultEdge evEdge10B3B1 = undirectedGraph.addEdge("EV10B3", "EV10B1");
+			undirectedGraph.setEdgeWeight(evEdge10B3B1, cal[9].weightGiver(-3, -1));
+			DefaultEdge evEdge10B301 = undirectedGraph.addEdge("EV10B3", "EV1001");
+			undirectedGraph.setEdgeWeight(evEdge10B301, cal[9].weightGiver(-3, 1));
+			DefaultEdge evEdge10B302 = undirectedGraph.addEdge("EV10B3", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge10B302, cal[9].weightGiver(-3, 2));
+			DefaultEdge evEdge10B303 = undirectedGraph.addEdge("EV10B3", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge10B303, cal[9].weightGiver(-3, 3));
+			DefaultEdge evEdge10B304 = undirectedGraph.addEdge("EV10B3", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge10B304, cal[9].weightGiver(-3, 4));
+			DefaultEdge evEdge10B305 = undirectedGraph.addEdge("EV10B3", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge10B305, cal[9].weightGiver(-3, 5));
+			DefaultEdge evEdge10B306 = undirectedGraph.addEdge("EV10B3", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge10B306, cal[9].weightGiver(-3, 6));
+			DefaultEdge evEdge10B307 = undirectedGraph.addEdge("EV10B3", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge10B307, cal[9].weightGiver(-3, 7));
+			DefaultEdge evEdge10B308 = undirectedGraph.addEdge("EV10B3", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge10B308, cal[9].weightGiver(-3, 8));
+			DefaultEdge evEdge10B309 = undirectedGraph.addEdge("EV10B3", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge10B309, cal[9].weightGiver(-3, 9));
+			DefaultEdge evEdge10B310 = undirectedGraph.addEdge("EV10B3", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge10B310, cal[9].weightGiver(-3, 10));
+			DefaultEdge evEdge10B311 = undirectedGraph.addEdge("EV10B3", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge10B311, cal[9].weightGiver(-3, 11));
+			DefaultEdge evEdge10B312 = undirectedGraph.addEdge("EV10B3", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge10B312, cal[9].weightGiver(-3, 12));
+			
+			DefaultEdge evEdge10B2B1 = undirectedGraph.addEdge("EV10B2", "EV10B1");
+			undirectedGraph.setEdgeWeight(evEdge10B2B1, cal[9].weightGiver(-2, -1));
+			DefaultEdge evEdge10B201 = undirectedGraph.addEdge("EV10B2", "EV1001");
+			undirectedGraph.setEdgeWeight(evEdge10B201, cal[9].weightGiver(-2, 1));
+			DefaultEdge evEdge10B202 = undirectedGraph.addEdge("EV10B2", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge10B202, cal[9].weightGiver(-2, 2));
+			DefaultEdge evEdge10B203 = undirectedGraph.addEdge("EV10B2", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge10B203, cal[9].weightGiver(-2, 3));
+			DefaultEdge evEdge10B204 = undirectedGraph.addEdge("EV10B2", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge10B204, cal[9].weightGiver(-2, 4));
+			DefaultEdge evEdge10B205 = undirectedGraph.addEdge("EV10B2", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge10B205, cal[9].weightGiver(-2, 5));
+			DefaultEdge evEdge10B206 = undirectedGraph.addEdge("EV10B2", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge10B206, cal[9].weightGiver(-2, 6));
+			DefaultEdge evEdge10B207 = undirectedGraph.addEdge("EV10B2", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge10B207, cal[9].weightGiver(-2, 7));
+			DefaultEdge evEdge10B208 = undirectedGraph.addEdge("EV10B2", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge10B208, cal[9].weightGiver(-2, 8));
+			DefaultEdge evEdge10B209 = undirectedGraph.addEdge("EV10B2", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge10B209, cal[9].weightGiver(-2, 9));
+			DefaultEdge evEdge10B210 = undirectedGraph.addEdge("EV10B2", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge10B210, cal[9].weightGiver(-2, 10));
+			DefaultEdge evEdge10B211 = undirectedGraph.addEdge("EV10B2", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge10B211, cal[9].weightGiver(-2, 11));
+			DefaultEdge evEdge10B212 = undirectedGraph.addEdge("EV10B2", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge10B212, cal[9].weightGiver(-2, 12));
+			
+			DefaultEdge evEdge10B101 = undirectedGraph.addEdge("EV10B1", "EV1001");
+			undirectedGraph.setEdgeWeight(evEdge10B101, cal[9].weightGiver(-1, 1));
+			DefaultEdge evEdge10B102 = undirectedGraph.addEdge("EV10B1", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge10B102, cal[9].weightGiver(-1, 2));
+			DefaultEdge evEdge10B103 = undirectedGraph.addEdge("EV10B1", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge10B103, cal[9].weightGiver(-1, 3));
+			DefaultEdge evEdge10B104 = undirectedGraph.addEdge("EV10B1", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge10B104, cal[9].weightGiver(-1, 4));
+			DefaultEdge evEdge10B105 = undirectedGraph.addEdge("EV10B1", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge10B105, cal[9].weightGiver(-1, 5));
+			DefaultEdge evEdge10B106 = undirectedGraph.addEdge("EV10B1", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge10B106, cal[9].weightGiver(-1, 6));
+			DefaultEdge evEdge10B107 = undirectedGraph.addEdge("EV10B1", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge10B107, cal[9].weightGiver(-1, 7));
+			DefaultEdge evEdge10B108 = undirectedGraph.addEdge("EV10B1", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge10B108, cal[9].weightGiver(-1, 8));
+			DefaultEdge evEdge10B109 = undirectedGraph.addEdge("EV10B1", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge10B109, cal[9].weightGiver(-1, 9));
+			DefaultEdge evEdge10B110 = undirectedGraph.addEdge("EV10B1", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge10B110, cal[9].weightGiver(-1, 10));
+			DefaultEdge evEdge10B111 = undirectedGraph.addEdge("EV10B1", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge10B111, cal[9].weightGiver(-1, 11));
+			DefaultEdge evEdge10B112 = undirectedGraph.addEdge("EV10B1", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge10B112, cal[9].weightGiver(-1, 12));
+			
+			DefaultEdge evEdge100102 = undirectedGraph.addEdge("EV1001", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge100102, cal[9].weightGiver(1, 2));
+			DefaultEdge evEdge100103 = undirectedGraph.addEdge("EV1001", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge100103, cal[9].weightGiver(1, 3));
+			DefaultEdge evEdge100104 = undirectedGraph.addEdge("EV1001", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge100104, cal[9].weightGiver(1, 4));
+			DefaultEdge evEdge100105 = undirectedGraph.addEdge("EV1001", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100105, cal[9].weightGiver(1, 5));
+			DefaultEdge evEdge100106 = undirectedGraph.addEdge("EV1001", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100106, cal[9].weightGiver(1, 6));
+			DefaultEdge evEdge100107 = undirectedGraph.addEdge("EV1001", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100107, cal[9].weightGiver(1, 7));
+			DefaultEdge evEdge100108 = undirectedGraph.addEdge("EV1001", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100108, cal[9].weightGiver(1, 8));
+			DefaultEdge evEdge100109 = undirectedGraph.addEdge("EV1001", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100109, cal[9].weightGiver(1, 9));
+			DefaultEdge evEdge100110 = undirectedGraph.addEdge("EV1001", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100110, cal[9].weightGiver(1, 10));
+			DefaultEdge evEdge100111 = undirectedGraph.addEdge("EV1001", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100111, cal[9].weightGiver(1, 11));
+			DefaultEdge evEdge100112 = undirectedGraph.addEdge("EV1001", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100112, cal[9].weightGiver(1, 12));
+			
+			DefaultEdge evEdge100203 = undirectedGraph.addEdge("EV1002", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge100203, cal[9].weightGiver(2, 3));
+			DefaultEdge evEdge100204 = undirectedGraph.addEdge("EV1002", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge100204, cal[9].weightGiver(2, 4));
+			DefaultEdge evEdge100205 = undirectedGraph.addEdge("EV1002", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100205, cal[9].weightGiver(2, 5));
+			DefaultEdge evEdge100206 = undirectedGraph.addEdge("EV1002", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100206, cal[9].weightGiver(2, 6));
+			DefaultEdge evEdge100207 = undirectedGraph.addEdge("EV1002", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100207, cal[9].weightGiver(2, 7));
+			DefaultEdge evEdge100208 = undirectedGraph.addEdge("EV1002", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100208, cal[9].weightGiver(2, 8));
+			DefaultEdge evEdge100209 = undirectedGraph.addEdge("EV1002", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100209, cal[9].weightGiver(2, 9));
+			DefaultEdge evEdge100210 = undirectedGraph.addEdge("EV1002", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100210, cal[9].weightGiver(2, 10));
+			DefaultEdge evEdge100211 = undirectedGraph.addEdge("EV1002", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100211, cal[9].weightGiver(2, 11));
+			DefaultEdge evEdge100212 = undirectedGraph.addEdge("EV1002", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100212, cal[9].weightGiver(2, 12));
+			
+			DefaultEdge evEdge100304 = undirectedGraph.addEdge("EV1003", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge100304, cal[9].weightGiver(3, 4));
+			DefaultEdge evEdge100305 = undirectedGraph.addEdge("EV1003", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100305, cal[9].weightGiver(3, 5));
+			DefaultEdge evEdge100306 = undirectedGraph.addEdge("EV1003", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100306, cal[9].weightGiver(3, 6));
+			DefaultEdge evEdge100307 = undirectedGraph.addEdge("EV1003", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100307, cal[9].weightGiver(3, 7));
+			DefaultEdge evEdge100308 = undirectedGraph.addEdge("EV1003", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100308, cal[9].weightGiver(3, 8));
+			DefaultEdge evEdge100309 = undirectedGraph.addEdge("EV1003", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100309, cal[9].weightGiver(3, 9));
+			DefaultEdge evEdge100310 = undirectedGraph.addEdge("EV1003", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100310, cal[9].weightGiver(3, 10));
+			DefaultEdge evEdge100311 = undirectedGraph.addEdge("EV1003", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100311, cal[9].weightGiver(3, 11));
+			DefaultEdge evEdge100312 = undirectedGraph.addEdge("EV1003", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100312, cal[9].weightGiver(3, 12));
+			
+			DefaultEdge evEdge100405 = undirectedGraph.addEdge("EV1004", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100405, cal[9].weightGiver(4, 5));
+			DefaultEdge evEdge100406 = undirectedGraph.addEdge("EV1004", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100406, cal[9].weightGiver(4, 6));
+			DefaultEdge evEdge100407 = undirectedGraph.addEdge("EV1004", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100407, cal[9].weightGiver(4, 7));
+			DefaultEdge evEdge100408 = undirectedGraph.addEdge("EV1004", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100408, cal[9].weightGiver(4, 8));
+			DefaultEdge evEdge100409 = undirectedGraph.addEdge("EV1004", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100409, cal[9].weightGiver(4, 9));
+			DefaultEdge evEdge100410 = undirectedGraph.addEdge("EV1004", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100410, cal[9].weightGiver(4, 10));
+			DefaultEdge evEdge100411 = undirectedGraph.addEdge("EV1004", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100411, cal[9].weightGiver(4, 11));
+			DefaultEdge evEdge100412 = undirectedGraph.addEdge("EV1004", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100412, cal[9].weightGiver(4, 12));
+		
+			DefaultEdge evEdge100506 = undirectedGraph.addEdge("EV1005", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100506, cal[9].weightGiver(5, 6));
+			DefaultEdge evEdge100507 = undirectedGraph.addEdge("EV1005", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100507, cal[9].weightGiver(5, 7));
+			DefaultEdge evEdge100508 = undirectedGraph.addEdge("EV1005", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100508, cal[9].weightGiver(5, 8));
+			DefaultEdge evEdge100509 = undirectedGraph.addEdge("EV1005", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100509, cal[9].weightGiver(5, 9));
+			DefaultEdge evEdge100510 = undirectedGraph.addEdge("EV1005", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100510, cal[9].weightGiver(5, 10));
+			DefaultEdge evEdge100511 = undirectedGraph.addEdge("EV1005", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100511, cal[9].weightGiver(5, 11));
+			DefaultEdge evEdge100512 = undirectedGraph.addEdge("EV1005", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100512, cal[9].weightGiver(5, 12));
+			
+			DefaultEdge evEdge100607 = undirectedGraph.addEdge("EV1006", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100607, cal[9].weightGiver(6, 7));
+			DefaultEdge evEdge100608 = undirectedGraph.addEdge("EV1006", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100608, cal[9].weightGiver(6, 8));
+			DefaultEdge evEdge100609 = undirectedGraph.addEdge("EV1006", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100609, cal[9].weightGiver(6, 9));
+			DefaultEdge evEdge100610 = undirectedGraph.addEdge("EV1006", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100610, cal[9].weightGiver(6, 10));
+			DefaultEdge evEdge100611 = undirectedGraph.addEdge("EV1006", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100611, cal[9].weightGiver(6, 11));
+			DefaultEdge evEdge100612 = undirectedGraph.addEdge("EV1006", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100612, cal[9].weightGiver(6, 12));
+			
+			DefaultEdge evEdge100708 = undirectedGraph.addEdge("EV1007", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100708, cal[9].weightGiver(7, 8));
+			DefaultEdge evEdge100709 = undirectedGraph.addEdge("EV1007", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100709, cal[9].weightGiver(7, 9));
+			DefaultEdge evEdge100710 = undirectedGraph.addEdge("EV1007", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100710, cal[9].weightGiver(7, 10));
+			DefaultEdge evEdge100711 = undirectedGraph.addEdge("EV1007", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100711, cal[9].weightGiver(7, 11));
+			DefaultEdge evEdge100712 = undirectedGraph.addEdge("EV1007", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100712, cal[9].weightGiver(7, 12));
+			
+			DefaultEdge evEdge100809 = undirectedGraph.addEdge("EV1008", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100809, cal[9].weightGiver(8, 9));
+			DefaultEdge evEdge100810 = undirectedGraph.addEdge("EV1008", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100810, cal[9].weightGiver(8, 10));
+			DefaultEdge evEdge100811 = undirectedGraph.addEdge("EV1008", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100811, cal[9].weightGiver(8, 11));
+			DefaultEdge evEdge100812 = undirectedGraph.addEdge("EV1008", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100812, cal[9].weightGiver(8, 12));
+			
+			DefaultEdge evEdge100910 = undirectedGraph.addEdge("EV1009", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100910, cal[9].weightGiver(9, 10));
+			DefaultEdge evEdge100911 = undirectedGraph.addEdge("EV1009", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100911, cal[9].weightGiver(9, 11));
+			DefaultEdge evEdge100912 = undirectedGraph.addEdge("EV1009", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100912, cal[9].weightGiver(9, 12));
+			
+			DefaultEdge evEdge101011 = undirectedGraph.addEdge("EV1010", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge101011, cal[9].weightGiver(10, 11));
+			DefaultEdge evEdge101012 = undirectedGraph.addEdge("EV1010", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge101012, cal[9].weightGiver(10, 12));
+			
+			DefaultEdge evEdge101112 = undirectedGraph.addEdge("EV1011", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge101112, cal[9].weightGiver(11, 12));
+			
+			//11호기
+			DefaultEdge evEdge11B3B2 = undirectedGraph.addEdge("EV11B3", "EV11B2");
+			undirectedGraph.setEdgeWeight(evEdge11B3B2, cal[10].weightGiver(-3, -2));
+			DefaultEdge evEdge11B3B1 = undirectedGraph.addEdge("EV11B3", "EV11B1");
+			undirectedGraph.setEdgeWeight(evEdge11B3B1, cal[10].weightGiver(-3, -1));			
+			DefaultEdge evEdge11B301 = undirectedGraph.addEdge("EV11B3", "EV1101");
+			undirectedGraph.setEdgeWeight(evEdge11B301, cal[10].weightGiver(-3, 1));
+			DefaultEdge evEdge11B303 = undirectedGraph.addEdge("EV11B3", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge11B303, cal[10].weightGiver(-3, 3));
+			DefaultEdge evEdge11B305 = undirectedGraph.addEdge("EV11B3", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge11B305, cal[10].weightGiver(-3, 5));
+			DefaultEdge evEdge11B307 = undirectedGraph.addEdge("EV11B3", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge11B307, cal[10].weightGiver(-3, 7));
+			DefaultEdge evEdge11B309 = undirectedGraph.addEdge("EV11B3", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge11B309, cal[10].weightGiver(-3, 9));
+			
+			DefaultEdge evEdge11B2B1 = undirectedGraph.addEdge("EV11B2", "EV11B1");
+			undirectedGraph.setEdgeWeight(evEdge11B2B1, cal[10].weightGiver(-2, -1));
+			DefaultEdge evEdge11B201 = undirectedGraph.addEdge("EV11B2", "EV1101");
+			undirectedGraph.setEdgeWeight(evEdge11B201, cal[10].weightGiver(-2, 1));
+			DefaultEdge evEdge11B203 = undirectedGraph.addEdge("EV11B2", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge11B203, cal[10].weightGiver(-2, 3));
+			DefaultEdge evEdge11B205 = undirectedGraph.addEdge("EV11B2", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge11B205, cal[10].weightGiver(-2, 5));
+			DefaultEdge evEdge11B207 = undirectedGraph.addEdge("EV11B2", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge11B207, cal[10].weightGiver(-2, 7));
+			DefaultEdge evEdge11B209 = undirectedGraph.addEdge("EV11B2", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge11B209, cal[10].weightGiver(-2, 9));
+			
+			DefaultEdge evEdge11B101 = undirectedGraph.addEdge("EV11B1", "EV1101");
+			undirectedGraph.setEdgeWeight(evEdge11B101, cal[10].weightGiver(-1, 1));
+			DefaultEdge evEdge11B103 = undirectedGraph.addEdge("EV11B1", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge11B103, cal[10].weightGiver(-1, 3));
+			DefaultEdge evEdge11B105 = undirectedGraph.addEdge("EV11B1", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge11B105, cal[10].weightGiver(-1, 5));
+			DefaultEdge evEdge11B107 = undirectedGraph.addEdge("EV11B1", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge11B107, cal[10].weightGiver(-1, 7));
+			DefaultEdge evEdge11B109 = undirectedGraph.addEdge("EV11B1", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge11B109, cal[10].weightGiver(-1, 9));
+
+			DefaultEdge evEdge110103 = undirectedGraph.addEdge("EV1101", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge110103, cal[10].weightGiver(1, 3));
+			DefaultEdge evEdge110105 = undirectedGraph.addEdge("EV1101", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge110105, cal[10].weightGiver(1, 5));
+			DefaultEdge evEdge110107 = undirectedGraph.addEdge("EV1101", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge110107, cal[10].weightGiver(1, 7));
+			DefaultEdge evEdge110109 = undirectedGraph.addEdge("EV1101", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110109, cal[10].weightGiver(1, 9));
+			
+			DefaultEdge evEdge110305 = undirectedGraph.addEdge("EV1103", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge110305, cal[10].weightGiver(3, 5));
+			DefaultEdge evEdge110307 = undirectedGraph.addEdge("EV1103", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge110307, cal[10].weightGiver(3, 7));
+			DefaultEdge evEdge110309 = undirectedGraph.addEdge("EV1103", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110309, cal[10].weightGiver(3, 9));
+			
+			DefaultEdge evEdge110507 = undirectedGraph.addEdge("EV1105", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge110507, cal[10].weightGiver(5, 7));
+			DefaultEdge evEdge110509 = undirectedGraph.addEdge("EV1105", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110509, cal[10].weightGiver(5, 9));
+			
+			DefaultEdge evEdge110709 = undirectedGraph.addEdge("EV1107", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110709, cal[10].weightGiver(7, 9));
+			
+			//12호기
+			DefaultEdge evEdge12B3B2 = undirectedGraph.addEdge("EV12B3", "EV12B2");
+			undirectedGraph.setEdgeWeight(evEdge12B3B2, cal[11].weightGiver(-3, -2));
+			DefaultEdge evEdge12B3B1 = undirectedGraph.addEdge("EV12B3", "EV12B1");
+			undirectedGraph.setEdgeWeight(evEdge12B3B1, cal[11].weightGiver(-3, -1));			
+			DefaultEdge evEdge12B301 = undirectedGraph.addEdge("EV12B3", "EV1201");
+			undirectedGraph.setEdgeWeight(evEdge12B301, cal[11].weightGiver(-3, 1));
+			DefaultEdge evEdge12B304 = undirectedGraph.addEdge("EV12B3", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge12B304, cal[11].weightGiver(-3, 4));
+			DefaultEdge evEdge12B306 = undirectedGraph.addEdge("EV12B3", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge12B306, cal[11].weightGiver(-3, 6));
+			DefaultEdge evEdge12B308 = undirectedGraph.addEdge("EV12B3", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge12B308, cal[11].weightGiver(-3, 8));
+			
+			DefaultEdge evEdge12B2B1 = undirectedGraph.addEdge("EV12B2", "EV12B1");
+			undirectedGraph.setEdgeWeight(evEdge12B2B1, cal[11].weightGiver(-2, -1));
+			DefaultEdge evEdge12B201 = undirectedGraph.addEdge("EV12B2", "EV1201");
+			undirectedGraph.setEdgeWeight(evEdge12B201, cal[11].weightGiver(-2, 1));
+			DefaultEdge evEdge12B204 = undirectedGraph.addEdge("EV12B2", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge12B204, cal[11].weightGiver(-2, 4));
+			DefaultEdge evEdge12B206 = undirectedGraph.addEdge("EV12B2", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge12B206, cal[11].weightGiver(-2, 6));
+			DefaultEdge evEdge12B208 = undirectedGraph.addEdge("EV12B2", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge12B208, cal[11].weightGiver(-2, 8));
+			
+			DefaultEdge evEdge12B101 = undirectedGraph.addEdge("EV12B1", "EV1201");
+			undirectedGraph.setEdgeWeight(evEdge12B101, cal[11].weightGiver(-1, 1));
+			DefaultEdge evEdge12B104 = undirectedGraph.addEdge("EV12B1", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge12B104, cal[11].weightGiver(-1, 4));
+			DefaultEdge evEdge12B106 = undirectedGraph.addEdge("EV12B1", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge12B106, cal[11].weightGiver(-1, 6));
+			DefaultEdge evEdge12B108 = undirectedGraph.addEdge("EV12B1", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge12B108, cal[11].weightGiver(-1, 8));
+
+			DefaultEdge evEdge120104 = undirectedGraph.addEdge("EV1201", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge120104, cal[11].weightGiver(1, 4));
+			DefaultEdge evEdge120106 = undirectedGraph.addEdge("EV1201", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge120106, cal[11].weightGiver(1, 6));
+			DefaultEdge evEdge120108 = undirectedGraph.addEdge("EV1201", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge120108, cal[11].weightGiver(1, 8));
+			
+			DefaultEdge evEdge120406 = undirectedGraph.addEdge("EV1204", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge120406, cal[11].weightGiver(4, 6));
+			DefaultEdge evEdge120408 = undirectedGraph.addEdge("EV1204", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge120408, cal[11].weightGiver(4, 8));
+			
+			DefaultEdge evEdge120608 = undirectedGraph.addEdge("EV1206", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge120608, cal[11].weightGiver(6, 8));
 		}
-		else if(up_down == -1) {
-			//1ȣ��
+		
+		else if(up_down < 0) {
+			//1호占쏙옙
 			DefaultEdge evEdge010301 = undirectedGraph.addEdge("EV0101", "EV0103");
 			undirectedGraph.setEdgeWeight(evEdge010301, cal[0].weightGiver(3, 1));
 			DefaultEdge evEdge010501 = undirectedGraph.addEdge("EV0101", "EV0105");
@@ -720,7 +1089,7 @@ public class verticalSetter {
 			undirectedGraph.setEdgeWeight(evEdge010907, cal[0].weightGiver(9, 7));
 			
 			
-			//2ȣ��
+			//2호占쏙옙
 			DefaultEdge evEdge020102 = undirectedGraph.addEdge("EV0201", "EV0202");
 			undirectedGraph.setEdgeWeight(evEdge020102, cal[1].weightGiver(2, 1));
 			DefaultEdge evEdge020104 = undirectedGraph.addEdge("EV0201", "EV0204");
@@ -742,7 +1111,7 @@ public class verticalSetter {
 			DefaultEdge evEdge020608 = undirectedGraph.addEdge("EV0206", "EV0208");
 			undirectedGraph.setEdgeWeight(evEdge020608, cal[1].weightGiver(8, 6));
 			
-			//3ȣ��
+			//3호占쏙옙
 			DefaultEdge evEdge03B6B5 = undirectedGraph.addEdge("EV03B6", "EV03B5");
 			undirectedGraph.setEdgeWeight(evEdge03B6B5, cal[2].weightGiver(-5, -6));
 			DefaultEdge evEdge03B6B4 = undirectedGraph.addEdge("EV03B6", "EV03B4");
@@ -817,7 +1186,7 @@ public class verticalSetter {
 			undirectedGraph.setEdgeWeight(evEdge030709, cal[2].weightGiver(9, 7));
 		
 			
-			//4ȣ��
+			//4호占쏙옙
 			DefaultEdge evEdge04B6B5 = undirectedGraph.addEdge("EV04B6", "EV04B5");
 			undirectedGraph.setEdgeWeight(evEdge04B6B5, cal[3].weightGiver(-5, -6));
 			DefaultEdge evEdge04B6B4 = undirectedGraph.addEdge("EV04B6", "EV04B4");
@@ -875,7 +1244,7 @@ public class verticalSetter {
 			DefaultEdge evEdge040608 = undirectedGraph.addEdge("EV0406", "EV0408");
 			undirectedGraph.setEdgeWeight(evEdge040608, cal[3].weightGiver(8, 6));
 			
-			//5ȣ��
+			//5호占쏙옙
 			DefaultEdge evEdge05B6B5 = undirectedGraph.addEdge("EV05B6", "EV05B5");
 			undirectedGraph.setEdgeWeight(evEdge05B6B5, cal[4].weightGiver(-5, -6));
 			DefaultEdge evEdge05B6B4 = undirectedGraph.addEdge("EV05B6", "EV05B4");
@@ -1087,7 +1456,7 @@ public class verticalSetter {
 			DefaultEdge evEdge050809 = undirectedGraph.addEdge("EV0508", "EV0509");
 			undirectedGraph.setEdgeWeight(evEdge050809, cal[4].weightGiver(9, 8));
 			
-			//6ȣ��
+			//6호占쏙옙
 			DefaultEdge evEdge06B3B2 = undirectedGraph.addEdge("EV06B3", "EV06B2");
 			undirectedGraph.setEdgeWeight(evEdge06B3B2, cal[5].weightGiver(-2, -3));
 			DefaultEdge evEdge06B3B1 = undirectedGraph.addEdge("EV06B3", "EV06B1");
@@ -1312,7 +1681,7 @@ public class verticalSetter {
 			DefaultEdge evEdge061112 = undirectedGraph.addEdge("EV0611", "EV0612");
 			undirectedGraph.setEdgeWeight(evEdge061112, cal[5].weightGiver(12, 11));
 
-			//7ȣ��
+			//7호기
 			DefaultEdge evEdge07B3B2 = undirectedGraph.addEdge("EV07B3", "EV07B2");
 			undirectedGraph.setEdgeWeight(evEdge07B3B2, cal[6].weightGiver(-2, -3));
 			DefaultEdge evEdge07B3B1 = undirectedGraph.addEdge("EV07B3", "EV07B1");
@@ -1375,24 +1744,394 @@ public class verticalSetter {
 			
 			DefaultEdge evEdge070912 = undirectedGraph.addEdge("EV0709", "EV0712");
 			undirectedGraph.setEdgeWeight(evEdge070912, cal[6].weightGiver(12, 9));
+			
+			//8호기
+			DefaultEdge evEdge080105 = undirectedGraph.addEdge("EV0801", "EV0805");
+			undirectedGraph.setEdgeWeight(evEdge080105, cal[7].weightGiver(5, 1));
+			DefaultEdge evEdge080108 = undirectedGraph.addEdge("EV0801", "EV0808");
+			undirectedGraph.setEdgeWeight(evEdge080108, cal[7].weightGiver(8, 1));
+			DefaultEdge evEdge080111 = undirectedGraph.addEdge("EV0801", "EV0811");
+			undirectedGraph.setEdgeWeight(evEdge080111, cal[7].weightGiver(11, 1));
+			
+			DefaultEdge evEdge080508 = undirectedGraph.addEdge("EV0805", "EV0808");
+			undirectedGraph.setEdgeWeight(evEdge080508, cal[7].weightGiver(8, 5));
+			DefaultEdge evEdge080511 = undirectedGraph.addEdge("EV0805", "EV0811");
+			undirectedGraph.setEdgeWeight(evEdge080511, cal[7].weightGiver(11, 5));
+			
+			DefaultEdge evEdge080811 = undirectedGraph.addEdge("EV0808", "EV0811");
+			undirectedGraph.setEdgeWeight(evEdge080811, cal[7].weightGiver(11, 8));
+			
+			//9호기
+			DefaultEdge evEdge090104 = undirectedGraph.addEdge("EV0901", "EV0904");
+			undirectedGraph.setEdgeWeight(evEdge090104, cal[8].weightGiver(4, 1));
+			DefaultEdge evEdge090107 = undirectedGraph.addEdge("EV0901", "EV0907");
+			undirectedGraph.setEdgeWeight(evEdge090107, cal[8].weightGiver(7, 1));
+			DefaultEdge evEdge090110 = undirectedGraph.addEdge("EV0901", "EV0910");
+			undirectedGraph.setEdgeWeight(evEdge090110, cal[8].weightGiver(10, 1));
+			
+			DefaultEdge evEdge090407 = undirectedGraph.addEdge("EV0904", "EV0907");
+			undirectedGraph.setEdgeWeight(evEdge090407, cal[8].weightGiver(7, 4));
+			DefaultEdge evEdge090410 = undirectedGraph.addEdge("EV0904", "EV0910");
+			undirectedGraph.setEdgeWeight(evEdge090410, cal[8].weightGiver(10, 4));
+			
+			DefaultEdge evEdge090710 = undirectedGraph.addEdge("EV0907", "EV0910");
+			undirectedGraph.setEdgeWeight(evEdge090710, cal[8].weightGiver(10, 7));
+			
+			//10호기
+			DefaultEdge evEdge10B3B2 = undirectedGraph.addEdge("EV10B3", "EV10B2");
+			undirectedGraph.setEdgeWeight(evEdge10B3B2, cal[9].weightGiver(-2, -3));
+			DefaultEdge evEdge10B3B1 = undirectedGraph.addEdge("EV10B3", "EV10B1");
+			undirectedGraph.setEdgeWeight(evEdge10B3B1, cal[9].weightGiver(-1, -3));
+			DefaultEdge evEdge10B301 = undirectedGraph.addEdge("EV10B3", "EV1001");
+			undirectedGraph.setEdgeWeight(evEdge10B301, cal[9].weightGiver(1, -3));
+			DefaultEdge evEdge10B302 = undirectedGraph.addEdge("EV10B3", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge10B302, cal[9].weightGiver(2, -3));
+			DefaultEdge evEdge10B303 = undirectedGraph.addEdge("EV10B3", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge10B303, cal[9].weightGiver(3, -3));
+			DefaultEdge evEdge10B304 = undirectedGraph.addEdge("EV10B3", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge10B304, cal[9].weightGiver(4, -3));
+			DefaultEdge evEdge10B305 = undirectedGraph.addEdge("EV10B3", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge10B305, cal[9].weightGiver(5, -3));
+			DefaultEdge evEdge10B306 = undirectedGraph.addEdge("EV10B3", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge10B306, cal[9].weightGiver(6, -3));
+			DefaultEdge evEdge10B307 = undirectedGraph.addEdge("EV10B3", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge10B307, cal[9].weightGiver(7, -3));
+			DefaultEdge evEdge10B308 = undirectedGraph.addEdge("EV10B3", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge10B308, cal[9].weightGiver(8, -3));
+			DefaultEdge evEdge10B309 = undirectedGraph.addEdge("EV10B3", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge10B309, cal[9].weightGiver(9, -3));
+			DefaultEdge evEdge10B310 = undirectedGraph.addEdge("EV10B3", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge10B310, cal[9].weightGiver(10, -3));
+			DefaultEdge evEdge10B311 = undirectedGraph.addEdge("EV10B3", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge10B311, cal[9].weightGiver(11, -3));
+			DefaultEdge evEdge10B312 = undirectedGraph.addEdge("EV10B3", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge10B312, cal[9].weightGiver(12, -3));
+			
+			DefaultEdge evEdge10B2B1 = undirectedGraph.addEdge("EV10B2", "EV10B1");
+			undirectedGraph.setEdgeWeight(evEdge10B2B1, cal[9].weightGiver(-1, -2));
+			DefaultEdge evEdge10B201 = undirectedGraph.addEdge("EV10B2", "EV1001");
+			undirectedGraph.setEdgeWeight(evEdge10B201, cal[9].weightGiver(1, -2));
+			DefaultEdge evEdge10B202 = undirectedGraph.addEdge("EV10B2", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge10B202, cal[9].weightGiver(2, -2));
+			DefaultEdge evEdge10B203 = undirectedGraph.addEdge("EV10B2", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge10B203, cal[9].weightGiver(3, -2));
+			DefaultEdge evEdge10B204 = undirectedGraph.addEdge("EV10B2", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge10B204, cal[9].weightGiver(4, -2));
+			DefaultEdge evEdge10B205 = undirectedGraph.addEdge("EV10B2", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge10B205, cal[9].weightGiver(5, -2));
+			DefaultEdge evEdge10B206 = undirectedGraph.addEdge("EV10B2", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge10B206, cal[9].weightGiver(6, -2));
+			DefaultEdge evEdge10B207 = undirectedGraph.addEdge("EV10B2", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge10B207, cal[9].weightGiver(7, -2));
+			DefaultEdge evEdge10B208 = undirectedGraph.addEdge("EV10B2", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge10B208, cal[9].weightGiver(8, -2));
+			DefaultEdge evEdge10B209 = undirectedGraph.addEdge("EV10B2", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge10B209, cal[9].weightGiver(9, -2));
+			DefaultEdge evEdge10B210 = undirectedGraph.addEdge("EV10B2", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge10B210, cal[9].weightGiver(10, -2));
+			DefaultEdge evEdge10B211 = undirectedGraph.addEdge("EV10B2", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge10B211, cal[9].weightGiver(11, -2));
+			DefaultEdge evEdge10B212 = undirectedGraph.addEdge("EV10B2", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge10B212, cal[9].weightGiver(12, -2));
+			
+			DefaultEdge evEdge10B101 = undirectedGraph.addEdge("EV10B1", "EV1001");
+			undirectedGraph.setEdgeWeight(evEdge10B101, cal[9].weightGiver(1, -1));
+			DefaultEdge evEdge10B102 = undirectedGraph.addEdge("EV10B1", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge10B102, cal[9].weightGiver(2, -1));
+			DefaultEdge evEdge10B103 = undirectedGraph.addEdge("EV10B1", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge10B103, cal[9].weightGiver(3, -1));
+			DefaultEdge evEdge10B104 = undirectedGraph.addEdge("EV10B1", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge10B104, cal[9].weightGiver(4, -1));
+			DefaultEdge evEdge10B105 = undirectedGraph.addEdge("EV10B1", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge10B105, cal[9].weightGiver(5, -1));
+			DefaultEdge evEdge10B106 = undirectedGraph.addEdge("EV10B1", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge10B106, cal[9].weightGiver(6, -1));
+			DefaultEdge evEdge10B107 = undirectedGraph.addEdge("EV10B1", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge10B107, cal[9].weightGiver(7, -1));
+			DefaultEdge evEdge10B108 = undirectedGraph.addEdge("EV10B1", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge10B108, cal[9].weightGiver(8, -1));
+			DefaultEdge evEdge10B109 = undirectedGraph.addEdge("EV10B1", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge10B109, cal[9].weightGiver(9, -1));
+			DefaultEdge evEdge10B110 = undirectedGraph.addEdge("EV10B1", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge10B110, cal[9].weightGiver(10, -1));
+			DefaultEdge evEdge10B111 = undirectedGraph.addEdge("EV10B1", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge10B111, cal[9].weightGiver(11, -1));
+			DefaultEdge evEdge10B112 = undirectedGraph.addEdge("EV10B1", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge10B112, cal[9].weightGiver(12, -1));
+			
+			DefaultEdge evEdge100102 = undirectedGraph.addEdge("EV1001", "EV1002");
+			undirectedGraph.setEdgeWeight(evEdge100102, cal[9].weightGiver(2, 1));
+			DefaultEdge evEdge100103 = undirectedGraph.addEdge("EV1001", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge100103, cal[9].weightGiver(3, 1));
+			DefaultEdge evEdge100104 = undirectedGraph.addEdge("EV1001", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge100104, cal[9].weightGiver(4, 1));
+			DefaultEdge evEdge100105 = undirectedGraph.addEdge("EV1001", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100105, cal[9].weightGiver(5, 1));
+			DefaultEdge evEdge100106 = undirectedGraph.addEdge("EV1001", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100106, cal[9].weightGiver(6, 1));
+			DefaultEdge evEdge100107 = undirectedGraph.addEdge("EV1001", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100107, cal[9].weightGiver(7, 1));
+			DefaultEdge evEdge100108 = undirectedGraph.addEdge("EV1001", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100108, cal[9].weightGiver(8, 1));
+			DefaultEdge evEdge100109 = undirectedGraph.addEdge("EV1001", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100109, cal[9].weightGiver(9, 1));
+			DefaultEdge evEdge100110 = undirectedGraph.addEdge("EV1001", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100110, cal[9].weightGiver(10, 1));
+			DefaultEdge evEdge100111 = undirectedGraph.addEdge("EV1001", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100111, cal[9].weightGiver(11, 1));
+			DefaultEdge evEdge100112 = undirectedGraph.addEdge("EV1001", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100112, cal[9].weightGiver(12, 1));
+			
+			DefaultEdge evEdge100203 = undirectedGraph.addEdge("EV1002", "EV1003");
+			undirectedGraph.setEdgeWeight(evEdge100203, cal[9].weightGiver(3, 2));
+			DefaultEdge evEdge100204 = undirectedGraph.addEdge("EV1002", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge100204, cal[9].weightGiver(4, 2));
+			DefaultEdge evEdge100205 = undirectedGraph.addEdge("EV1002", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100205, cal[9].weightGiver(5, 2));
+			DefaultEdge evEdge100206 = undirectedGraph.addEdge("EV1002", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100206, cal[9].weightGiver(6, 2));
+			DefaultEdge evEdge100207 = undirectedGraph.addEdge("EV1002", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100207, cal[9].weightGiver(7, 2));
+			DefaultEdge evEdge100208 = undirectedGraph.addEdge("EV1002", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100208, cal[9].weightGiver(8, 2));
+			DefaultEdge evEdge100209 = undirectedGraph.addEdge("EV1002", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100209, cal[9].weightGiver(9, 2));
+			DefaultEdge evEdge100210 = undirectedGraph.addEdge("EV1002", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100210, cal[9].weightGiver(10, 2));
+			DefaultEdge evEdge100211 = undirectedGraph.addEdge("EV1002", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100211, cal[9].weightGiver(11, 2));
+			DefaultEdge evEdge100212 = undirectedGraph.addEdge("EV1002", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100212, cal[9].weightGiver(12, 2));
+			
+			DefaultEdge evEdge100304 = undirectedGraph.addEdge("EV1003", "EV1004");
+			undirectedGraph.setEdgeWeight(evEdge100304, cal[9].weightGiver(4, 3));
+			DefaultEdge evEdge100305 = undirectedGraph.addEdge("EV1003", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100305, cal[9].weightGiver(5, 3));
+			DefaultEdge evEdge100306 = undirectedGraph.addEdge("EV1003", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100306, cal[9].weightGiver(6, 3));
+			DefaultEdge evEdge100307 = undirectedGraph.addEdge("EV1003", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100307, cal[9].weightGiver(7, 3));
+			DefaultEdge evEdge100308 = undirectedGraph.addEdge("EV1003", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100308, cal[9].weightGiver(8, 3));
+			DefaultEdge evEdge100309 = undirectedGraph.addEdge("EV1003", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100309, cal[9].weightGiver(9, 3));
+			DefaultEdge evEdge100310 = undirectedGraph.addEdge("EV1003", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100310, cal[9].weightGiver(10, 3));
+			DefaultEdge evEdge100311 = undirectedGraph.addEdge("EV1003", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100311, cal[9].weightGiver(11, 3));
+			DefaultEdge evEdge100312 = undirectedGraph.addEdge("EV1003", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100312, cal[9].weightGiver(12, 3));
+			
+			DefaultEdge evEdge100405 = undirectedGraph.addEdge("EV1004", "EV1005");
+			undirectedGraph.setEdgeWeight(evEdge100405, cal[9].weightGiver(5, 4));
+			DefaultEdge evEdge100406 = undirectedGraph.addEdge("EV1004", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100406, cal[9].weightGiver(6, 4));
+			DefaultEdge evEdge100407 = undirectedGraph.addEdge("EV1004", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100407, cal[9].weightGiver(7, 4));
+			DefaultEdge evEdge100408 = undirectedGraph.addEdge("EV1004", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100408, cal[9].weightGiver(8, 4));
+			DefaultEdge evEdge100409 = undirectedGraph.addEdge("EV1004", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100409, cal[9].weightGiver(9, 4));
+			DefaultEdge evEdge100410 = undirectedGraph.addEdge("EV1004", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100410, cal[9].weightGiver(10, 4));
+			DefaultEdge evEdge100411 = undirectedGraph.addEdge("EV1004", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100411, cal[9].weightGiver(11, 4));
+			DefaultEdge evEdge100412 = undirectedGraph.addEdge("EV1004", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100412, cal[9].weightGiver(12, 4));
+		
+			DefaultEdge evEdge100506 = undirectedGraph.addEdge("EV1005", "EV1006");
+			undirectedGraph.setEdgeWeight(evEdge100506, cal[9].weightGiver(6, 5));
+			DefaultEdge evEdge100507 = undirectedGraph.addEdge("EV1005", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100507, cal[9].weightGiver(7, 5));
+			DefaultEdge evEdge100508 = undirectedGraph.addEdge("EV1005", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100508, cal[9].weightGiver(8, 5));
+			DefaultEdge evEdge100509 = undirectedGraph.addEdge("EV1005", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100509, cal[9].weightGiver(9, 5));
+			DefaultEdge evEdge100510 = undirectedGraph.addEdge("EV1005", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100510, cal[9].weightGiver(10, 5));
+			DefaultEdge evEdge100511 = undirectedGraph.addEdge("EV1005", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100511, cal[9].weightGiver(11, 5));
+			DefaultEdge evEdge100512 = undirectedGraph.addEdge("EV1005", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100512, cal[9].weightGiver(12, 5));
+			
+			DefaultEdge evEdge100607 = undirectedGraph.addEdge("EV1006", "EV1007");
+			undirectedGraph.setEdgeWeight(evEdge100607, cal[9].weightGiver(7, 6));
+			DefaultEdge evEdge100608 = undirectedGraph.addEdge("EV1006", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100608, cal[9].weightGiver(8, 6));
+			DefaultEdge evEdge100609 = undirectedGraph.addEdge("EV1006", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100609, cal[9].weightGiver(9, 6));
+			DefaultEdge evEdge100610 = undirectedGraph.addEdge("EV1006", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100610, cal[9].weightGiver(10, 6));
+			DefaultEdge evEdge100611 = undirectedGraph.addEdge("EV1006", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100611, cal[9].weightGiver(11, 6));
+			DefaultEdge evEdge100612 = undirectedGraph.addEdge("EV1006", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100612, cal[9].weightGiver(12, 6));
+			
+			DefaultEdge evEdge100708 = undirectedGraph.addEdge("EV1007", "EV1008");
+			undirectedGraph.setEdgeWeight(evEdge100708, cal[9].weightGiver(8, 7));
+			DefaultEdge evEdge100709 = undirectedGraph.addEdge("EV1007", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100709, cal[9].weightGiver(9, 7));
+			DefaultEdge evEdge100710 = undirectedGraph.addEdge("EV1007", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100710, cal[9].weightGiver(10, 7));
+			DefaultEdge evEdge100711 = undirectedGraph.addEdge("EV1007", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100711, cal[9].weightGiver(11, 7));
+			DefaultEdge evEdge100712 = undirectedGraph.addEdge("EV1007", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100712, cal[9].weightGiver(12, 7));
+			
+			DefaultEdge evEdge100809 = undirectedGraph.addEdge("EV1008", "EV1009");
+			undirectedGraph.setEdgeWeight(evEdge100809, cal[9].weightGiver(9, 8));
+			DefaultEdge evEdge100810 = undirectedGraph.addEdge("EV1008", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100810, cal[9].weightGiver(10, 8));
+			DefaultEdge evEdge100811 = undirectedGraph.addEdge("EV1008", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100811, cal[9].weightGiver(11, 8));
+			DefaultEdge evEdge100812 = undirectedGraph.addEdge("EV1008", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100812, cal[9].weightGiver(12, 8));
+			
+			DefaultEdge evEdge100910 = undirectedGraph.addEdge("EV1009", "EV1010");
+			undirectedGraph.setEdgeWeight(evEdge100910, cal[9].weightGiver(10, 9));
+			DefaultEdge evEdge100911 = undirectedGraph.addEdge("EV1009", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge100911, cal[9].weightGiver(11, 9));
+			DefaultEdge evEdge100912 = undirectedGraph.addEdge("EV1009", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge100912, cal[9].weightGiver(12, 9));
+			
+			DefaultEdge evEdge101011 = undirectedGraph.addEdge("EV1010", "EV1011");
+			undirectedGraph.setEdgeWeight(evEdge101011, cal[9].weightGiver(11, 10));
+			DefaultEdge evEdge101012 = undirectedGraph.addEdge("EV1010", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge101012, cal[9].weightGiver(12, 10));
+			
+			DefaultEdge evEdge101112 = undirectedGraph.addEdge("EV1011", "EV1012");
+			undirectedGraph.setEdgeWeight(evEdge101112, cal[9].weightGiver(12, 11));
+			
+			//11호기
+			DefaultEdge evEdge11B3B2 = undirectedGraph.addEdge("EV11B3", "EV11B2");
+			undirectedGraph.setEdgeWeight(evEdge11B3B2, cal[10].weightGiver(-2, -3));
+			DefaultEdge evEdge11B3B1 = undirectedGraph.addEdge("EV11B3", "EV11B1");
+			undirectedGraph.setEdgeWeight(evEdge11B3B1, cal[10].weightGiver(-1, -3));			
+			DefaultEdge evEdge11B301 = undirectedGraph.addEdge("EV11B3", "EV1101");
+			undirectedGraph.setEdgeWeight(evEdge11B301, cal[10].weightGiver(1, -3));
+			DefaultEdge evEdge11B303 = undirectedGraph.addEdge("EV11B3", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge11B303, cal[10].weightGiver(3, -3));
+			DefaultEdge evEdge11B305 = undirectedGraph.addEdge("EV11B3", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge11B305, cal[10].weightGiver(5, -3));
+			DefaultEdge evEdge11B307 = undirectedGraph.addEdge("EV11B3", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge11B307, cal[10].weightGiver(7, -3));
+			DefaultEdge evEdge11B309 = undirectedGraph.addEdge("EV11B3", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge11B309, cal[10].weightGiver(9, -3));
+			
+			DefaultEdge evEdge11B2B1 = undirectedGraph.addEdge("EV11B2", "EV11B1");
+			undirectedGraph.setEdgeWeight(evEdge11B2B1, cal[10].weightGiver(-1, -2));
+			DefaultEdge evEdge11B201 = undirectedGraph.addEdge("EV11B2", "EV1101");
+			undirectedGraph.setEdgeWeight(evEdge11B201, cal[10].weightGiver(1, -2));
+			DefaultEdge evEdge11B203 = undirectedGraph.addEdge("EV11B2", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge11B203, cal[10].weightGiver(3, -2));
+			DefaultEdge evEdge11B205 = undirectedGraph.addEdge("EV11B2", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge11B205, cal[10].weightGiver(5, -2));
+			DefaultEdge evEdge11B207 = undirectedGraph.addEdge("EV11B2", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge11B207, cal[10].weightGiver(7, -2));
+			DefaultEdge evEdge11B209 = undirectedGraph.addEdge("EV11B2", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge11B209, cal[10].weightGiver(9, -2));
+			
+			DefaultEdge evEdge11B101 = undirectedGraph.addEdge("EV11B1", "EV1101");
+			undirectedGraph.setEdgeWeight(evEdge11B101, cal[10].weightGiver(1, -1));
+			DefaultEdge evEdge11B103 = undirectedGraph.addEdge("EV11B1", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge11B103, cal[10].weightGiver(3, -1));
+			DefaultEdge evEdge11B105 = undirectedGraph.addEdge("EV11B1", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge11B105, cal[10].weightGiver(5, -1));
+			DefaultEdge evEdge11B107 = undirectedGraph.addEdge("EV11B1", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge11B107, cal[10].weightGiver(7, -1));
+			DefaultEdge evEdge11B109 = undirectedGraph.addEdge("EV11B1", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge11B109, cal[10].weightGiver(9, -1));
+
+			DefaultEdge evEdge110103 = undirectedGraph.addEdge("EV1101", "EV1103");
+			undirectedGraph.setEdgeWeight(evEdge110103, cal[10].weightGiver(3, 1));
+			DefaultEdge evEdge110105 = undirectedGraph.addEdge("EV1101", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge110105, cal[10].weightGiver(5, 1));
+			DefaultEdge evEdge110107 = undirectedGraph.addEdge("EV1101", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge110107, cal[10].weightGiver(7, 1));
+			DefaultEdge evEdge110109 = undirectedGraph.addEdge("EV1101", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110109, cal[10].weightGiver(9, 1));
+			
+			DefaultEdge evEdge110305 = undirectedGraph.addEdge("EV1103", "EV1105");
+			undirectedGraph.setEdgeWeight(evEdge110305, cal[10].weightGiver(5, 3));
+			DefaultEdge evEdge110307 = undirectedGraph.addEdge("EV1103", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge110307, cal[10].weightGiver(7, 3));
+			DefaultEdge evEdge110309 = undirectedGraph.addEdge("EV1103", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110309, cal[10].weightGiver(9, 3));
+			
+			DefaultEdge evEdge110507 = undirectedGraph.addEdge("EV1105", "EV1107");
+			undirectedGraph.setEdgeWeight(evEdge110507, cal[10].weightGiver(7, 5));
+			DefaultEdge evEdge110509 = undirectedGraph.addEdge("EV1105", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110509, cal[10].weightGiver(9, 5));
+			
+			DefaultEdge evEdge110709 = undirectedGraph.addEdge("EV1107", "EV1109");
+			undirectedGraph.setEdgeWeight(evEdge110709, cal[10].weightGiver(9, 7));
+			
+			//12호기
+			DefaultEdge evEdge12B3B2 = undirectedGraph.addEdge("EV12B3", "EV12B2");
+			undirectedGraph.setEdgeWeight(evEdge12B3B2, cal[11].weightGiver(-2, -3));
+			DefaultEdge evEdge12B3B1 = undirectedGraph.addEdge("EV12B3", "EV12B1");
+			undirectedGraph.setEdgeWeight(evEdge12B3B1, cal[11].weightGiver(-1, -3));			
+			DefaultEdge evEdge12B301 = undirectedGraph.addEdge("EV12B3", "EV1201");
+			undirectedGraph.setEdgeWeight(evEdge12B301, cal[11].weightGiver(1, -3));
+			DefaultEdge evEdge12B304 = undirectedGraph.addEdge("EV12B3", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge12B304, cal[11].weightGiver(4, -3));
+			DefaultEdge evEdge12B306 = undirectedGraph.addEdge("EV12B3", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge12B306, cal[11].weightGiver(6, -3));
+			DefaultEdge evEdge12B308 = undirectedGraph.addEdge("EV12B3", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge12B308, cal[11].weightGiver(8, -3));
+			
+			DefaultEdge evEdge12B2B1 = undirectedGraph.addEdge("EV12B2", "EV12B1");
+			undirectedGraph.setEdgeWeight(evEdge12B2B1, cal[11].weightGiver(-1, -2));
+			DefaultEdge evEdge12B201 = undirectedGraph.addEdge("EV12B2", "EV1201");
+			undirectedGraph.setEdgeWeight(evEdge12B201, cal[11].weightGiver(1, -2));
+			DefaultEdge evEdge12B204 = undirectedGraph.addEdge("EV12B2", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge12B204, cal[11].weightGiver(4, -2));
+			DefaultEdge evEdge12B206 = undirectedGraph.addEdge("EV12B2", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge12B206, cal[11].weightGiver(6, -2));
+			DefaultEdge evEdge12B208 = undirectedGraph.addEdge("EV12B2", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge12B208, cal[11].weightGiver(8, -2));
+			
+			DefaultEdge evEdge12B101 = undirectedGraph.addEdge("EV12B1", "EV1201");
+			undirectedGraph.setEdgeWeight(evEdge12B101, cal[11].weightGiver(1, -1));
+			DefaultEdge evEdge12B104 = undirectedGraph.addEdge("EV12B1", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge12B104, cal[11].weightGiver(4, -1));
+			DefaultEdge evEdge12B106 = undirectedGraph.addEdge("EV12B1", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge12B106, cal[11].weightGiver(6, -1));
+			DefaultEdge evEdge12B108 = undirectedGraph.addEdge("EV12B1", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge12B108, cal[11].weightGiver(8, -1));
+
+			DefaultEdge evEdge120104 = undirectedGraph.addEdge("EV1201", "EV1204");
+			undirectedGraph.setEdgeWeight(evEdge120104, cal[11].weightGiver(4, 1));
+			DefaultEdge evEdge120106 = undirectedGraph.addEdge("EV1201", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge120106, cal[11].weightGiver(6, 1));
+			DefaultEdge evEdge120108 = undirectedGraph.addEdge("EV1201", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge120108, cal[11].weightGiver(8, 1));
+			
+			DefaultEdge evEdge120406 = undirectedGraph.addEdge("EV1204", "EV1206");
+			undirectedGraph.setEdgeWeight(evEdge120406, cal[11].weightGiver(6, 4));
+			DefaultEdge evEdge120408 = undirectedGraph.addEdge("EV1204", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge120408, cal[11].weightGiver(8, 4));
+			
+			DefaultEdge evEdge120608 = undirectedGraph.addEdge("EV1206", "EV1208");
+			undirectedGraph.setEdgeWeight(evEdge120608, cal[11].weightGiver(8, 6));
 		}
 	}
 	
 	
 	public void stSetter(String busy) {
 		int stairWeight;
-		if(busy == "계단 이용 불가") {
+		if(busy == "怨꾨떒 �씠�슜 遺덇�") {
 			stairWeight = -1;
 		}
-		else if (busy == "여유로움" ) {
+		else if (busy == "�뿬�쑀濡쒖�" ) {
 			stairWeight = 150;
 		}
-		else if (busy == "조금 바쁨") {
+		else if (busy == "議곌툑 諛붿겏") {
 			stairWeight = 80;
 		}
 		else {
 			stairWeight = 30;
-		} //바쁨 정도에 따른 계단 이용
+		} //諛붿겏 �젙�룄�뿉 �뵲瑜� 怨꾨떒 �씠�슜
 		
 			//ST01
 			DefaultEdge stEdge01B6B5 = undirectedGraph.addEdge("ST01B6", "ST01B5");
@@ -1618,4 +2357,4 @@ public class verticalSetter {
 	}
 }
 
-}
+
