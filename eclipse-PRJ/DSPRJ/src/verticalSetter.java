@@ -2120,18 +2120,18 @@ public class verticalSetter {
 	
 	public void stSetter() {
 		int stairWeight;
-		if(busy == "怨꾨떒 �씠�슜 遺덇�") {
-			stairWeight = -1;
-		}
-		else if (busy == "�뿬�쑀濡쒖�" ) {
-			stairWeight = 150;
-		}
-		else if (busy == "議곌툑 諛붿겏") {
-			stairWeight = 80;
-		}
-		else {
-			stairWeight = 30;
-		} //諛붿겏 �젙�룄�뿉 �뵲瑜� 怨꾨떒 �씠�슜
+		if(busy == "계단 이용 불가") {
+ 			stairWeight = -1;
+ 		}
+ 		else if (busy == "여유로움" ) {
+ 			stairWeight = 150;
+ 		}
+ 		else if (busy == "조금 바쁨") {
+ 			stairWeight = 80;
+ 		}
+ 		else {
+ 			stairWeight = 30;
+ 		} //바쁨 정도에 따른 계단 이용
 		
 			//ST01
 			DefaultEdge stEdge01B6B5 = JGraphT.undirectedGraph.addEdge("ST01B6", "ST01B5");
