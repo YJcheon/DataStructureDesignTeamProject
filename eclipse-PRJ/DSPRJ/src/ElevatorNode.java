@@ -2,16 +2,19 @@ import java.util.ArrayList;
 
 // ToDo : Input Sensor Data
 // ToDo : Elevator Structure design Needed
-public class ElevatorNode extends NodeData{
+public class ElevatorNode{
+	private ArrayList<String> sharedFloor;
 	public ElevatorNode(String idx, String name) {
-	      super(idx, name, 2);
+	      this.idx = idx;
+	      this.name = name;
 	      this.floor = new int[18];
 			for(int i=0; i<18; i++) {
 				this.floor[i] = 0;
 			}
+			this.sharedFloor = new ArrayList<>();
 	   }
 	// private int curFloor;
-	private ArrayList<String> sharedFloor;
+
 	private int[] floor;
 	private String idx;
 	private String name;
@@ -25,7 +28,7 @@ public class ElevatorNode extends NodeData{
 	public void setter(String idx, int nop, int direction, int nowFloor, int userNum) {
 		this.idx = idx;
 		this.name = name;
-		this.sharedFloor = new ArrayList<>();
+
 		
 		people = nop;
 		dir = direction;
