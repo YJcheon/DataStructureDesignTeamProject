@@ -22,7 +22,7 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 //		: Run Shortest Path Algorithms - Till 12/03
 
 public class JGraphT {
-	Input input;
+	Input input= new Input();
 	private static JNode node;
 	private static ArrayList<DefaultWeightedEdge> edges;
 	static DefaultUndirectedWeightedGraph<String, DefaultEdge> undirectedGraph;
@@ -94,8 +94,7 @@ public class JGraphT {
 	private void testing() {
 		//�Ʒ� �ڵ� ��ġ ��Ȯ��. ���������� ���� �� ev weight ���� �ڵ�
 		//public ElevatorNode(String idx, String name, int nop, int direction, int nowFloor, int userNum)
-		
-		String source,dest;
+
 		Scanner scan = new Scanner(System.in);
 		String msg = new String();
 		while(!node.isThisNodeExist(msg)) {
@@ -109,7 +108,6 @@ public class JGraphT {
 			System.out.println("DEST : ");
 			msg = scan.nextLine();
 		}
-		
 		input.setDesti(msg);
 		
 		ElevatorNode []evArr = new ElevatorNode[12];
@@ -129,7 +127,6 @@ public class JGraphT {
 		 verticalSetter vSet = new verticalSetter();
 		 vSet.evSetter(evArr, input.dFloor-input.sFloor);
 		
-		dest = msg;
 	    DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(undirectedGraph);
 	    List<String> shortestPath = dijkstraShortestPath.getPath(input.Start, input.Desti).getVertexList();
 		for (String path: shortestPath) {

@@ -20,12 +20,12 @@ public class Input {
 	
 	public void setStart(String msg) {
 		Start = new String(msg);
-		String pre1, pre2,pre3;
-		pre1= Start.substring(0,1);
+		String pre2,pre3;
 		pre2= Start.substring(1,2);
 		pre3= Start.substring(0,2);	
-		if(pre1 == "B") {
-			sFloor = -1*Integer.parseInt(pre2);
+		if(Start.startsWith("B")) {
+			int x = Integer.parseInt(pre2);
+			sFloor = -x;
 		}
 		else {
 			sFloor = Integer.parseInt(pre3);
@@ -34,12 +34,12 @@ public class Input {
 	
 	public void setDesti(String msg) {
 		Desti =new String(msg);
-		String pre1, pre2,pre3;
-		pre1= Desti.substring(0,1);
+		String pre2,pre3;
 		pre2= Desti.substring(1,2);
 		pre3= Desti.substring(0,2);	
-		if(pre1 == "B") {
-			dFloor = -1*Integer.parseInt(pre2);
+		if(Desti.startsWith("B")) {
+			int x = Integer.parseInt(pre2);
+			dFloor = -x;
 		}
 		else {
 			dFloor = Integer.parseInt(pre3);
