@@ -25,7 +25,7 @@ public class JGraphT {
 	Input input= new Input();
 	private static JNode node;
 	private static ArrayList<DefaultWeightedEdge> edges;
-	static DefaultUndirectedWeightedGraph<String, DefaultEdge> undirectedGraph;
+	public static DefaultUndirectedWeightedGraph<String, DefaultEdge> undirectedGraph;
 	public static void main(String[] main) {
 		node = new JNode();
 		edges = new ArrayList<>();
@@ -109,7 +109,6 @@ public class JGraphT {
 			msg = scan.nextLine();
 		}
 		input.setDesti(msg);
-		
 		ElevatorNode []evArr = new ElevatorNode[12];
 		for(int i=0; i<12; i++) {
 			evArr[i] = new ElevatorNode(" ", " ");
@@ -129,6 +128,7 @@ public class JGraphT {
 		 
 		 verticalSetter vSet = new verticalSetter();
 		 vSet.evSetter(evArr, input.dFloor-input.sFloor);
+		 vSet.stSetter();
 		
 	    DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(undirectedGraph);
 	    List<String> shortestPath = dijkstraShortestPath.getPath(input.Start, input.Desti).getVertexList();
