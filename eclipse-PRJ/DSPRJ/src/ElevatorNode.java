@@ -2,12 +2,14 @@ import java.util.ArrayList;
 
 // ToDo : Input Sensor Data
 // ToDo : Elevator Structure design Needed
-public class ElevatorNode{
-	ElevatorNode(String idx1, String idx2){
-		this.idx = idx1; this.name = idx2;
-		}
-	ElevatorNode(){
-	}
+public class ElevatorNode extends NodeData{
+	public ElevatorNode(String idx, String name) {
+	      super(idx, name, 2);
+	      this.floor = new int[18];
+			for(int i=0; i<18; i++) {
+				this.floor[i] = 0;
+			}
+	   }
 	// private int curFloor;
 	private ArrayList<String> sharedFloor;
 	private int[] floor;
@@ -18,13 +20,13 @@ public class ElevatorNode{
 	private int people;
 	private int now;
 	private int dir;
-	private int user; //������� �ο����� �������� EV���͸�
+	private int user; //占쏙옙占쏙옙占쏙옙占� 占싸울옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙 EV占쏙옙占싶몌옙
 	
 	public void setter(String idx, int nop, int direction, int nowFloor, int userNum) {
 		this.idx = idx;
 		this.name = name;
 		this.sharedFloor = new ArrayList<>();
-		this.floor = new int[18];
+		
 		people = nop;
 		dir = direction;
 		now = nowFloor;
@@ -36,7 +38,7 @@ public class ElevatorNode{
 	      else if(0 < people && people <11) {
 	         stayT = 15;
 	      }
-	      //20���϶��� �ȸ���ٰ� StayT�� 0�� �ƴ϶� ����ٸ� 20�̹Ƿ� stayT = 20
+	      //20占쏙옙占싹띰옙占쏙옙 占싫몌옙占쏙옙鳴占� StayT占쏙옙 0占쏙옙 占싣니띰옙 占쏙옙占쏙옙摸占� 20占싱므뤄옙 stayT = 20
 	      else if(10 < people && people <=20) {
 	         stayT = 20;
 	      }	
@@ -146,10 +148,10 @@ public class ElevatorNode{
 	      return bottom;
 	   }
 	   
-	   //a�� b�� index
+	   //a占쏙옙 b占쏙옙 index
 	   public int stayable(int a, int b, int []floor) {
 	      int k = 0;
-	      //a��b�� indexNum
+	      //a占쏙옙b占쏙옙 indexNum
 	      if(a>b) {
 	         int t=a;
 	         a=b;
@@ -222,7 +224,7 @@ public class ElevatorNode{
 	         else if(now == sf)
 	            CASE = 5;
 	         
-	         //Full�϶��� floor�迭�� ���������� �޶���
+	         //Full占싹띰옙占쏙옙 floor占썼열占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 占쌨띰옙占쏙옙
 	         int tf = topFloor(floor);
 	         int bf = botFloor(floor);
 	         int sectf = secTopFloor(floor);
@@ -234,7 +236,7 @@ public class ElevatorNode{
 	         floor[sectf]=1;
 	         floor[secbf]=1;
 	         floor[6]=1;
-	         //sf�� 1���ε� 1���� bottom�� ���� ���������� return isn't 999
+	         //sf占쏙옙 1占쏙옙占싸듸옙 1占쏙옙占쏙옙 bottom占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 return isn't 999
 	         if(floor[sf] == 0 || (sf == 6 && sf!=tf && sf!=bf && sf!=sectf && sf!=secbf)) {
 	            time = -1;
 	            return time;
@@ -282,7 +284,7 @@ public class ElevatorNode{
 	         else if(now == sf)
 	            CASE = 5;
 	         
-	         //Full�϶��� floor�迭�� ���������� �޶���
+	         //Full占싹띰옙占쏙옙 floor占썼열占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 占쌨띰옙占쏙옙
 	         int tf = topFloor(floor);
 	         int bf = botFloor(floor);
 	         int sectf = secTopFloor(floor);

@@ -111,6 +111,9 @@ public class JGraphT {
 		input.setDesti(msg);
 		
 		ElevatorNode []evArr = new ElevatorNode[12];
+		for(int i=0; i<12; i++) {
+			evArr[i] = new ElevatorNode(" ", " ");
+		}
 		 evArr[0].setter("1", input.sensorPeople[0], input.sensorDir[0], input.sensorNow[0], input.userNum);
 		 evArr[1].setter("2", input.sensorPeople[1], input.sensorDir[1], input.sensorNow[1], input.userNum);
 		 evArr[2].setter("3", input.sensorPeople[2], input.sensorDir[2], input.sensorNow[2], input.userNum);
@@ -122,7 +125,7 @@ public class JGraphT {
 		 evArr[8].setter("9", input.sensorPeople[8], input.sensorDir[8], input.sensorNow[8], input.userNum);
 		 evArr[9].setter("10", input.sensorPeople[9], input.sensorDir[9], input.sensorNow[9], input.userNum);
 		 evArr[10].setter("11", input.sensorPeople[10], input.sensorDir[10], input.sensorNow[10], input.userNum);
-		 //evArr[11].setter("12", input.sensorPeople[11], input.sensorDir[11], input.sensorNow[11], input.userNum);​
+		 evArr[11].setter("12", input.sensorPeople[11], input.sensorDir[11], input.sensorNow[11], input.userNum);
 		 
 		 verticalSetter vSet = new verticalSetter();
 		 vSet.evSetter(evArr, input.dFloor-input.sFloor);
