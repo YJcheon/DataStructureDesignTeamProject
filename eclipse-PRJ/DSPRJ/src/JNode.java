@@ -31,11 +31,7 @@ public class JNode {
 			line = br.readLine(); // Header Passing
 			while ((line = br.readLine()) != null) {
 				String[] token = line.split(",");
-				String newIdx = token[0];
-				if(newIdx.length() < 4) {
-					newIdx = "0" + newIdx;
-				}
-	            node.put(newIdx, new NodeData(newIdx, token[1], Integer.parseInt(token[2])));
+	            node.put(token[0], new NodeData(token[0], token[1], Integer.parseInt(token[2])));
 	            count++;
 	        }
 			br.close();
