@@ -31,7 +31,11 @@ public class JNode {
 			line = br.readLine(); // Header Passing
 			while ((line = br.readLine()) != null) {
 				String[] token = line.split(",");
-	            node.put(token[0], new NodeData(token[0], token[1], Integer.parseInt(token[2])));
+				String newNode = token[0];
+				if(newNode.length() < 4) {
+					newNode = "0" + newNode;
+				}
+				node.put(newNode, new NodeData(newNode, token[1], Integer.parseInt(token[2])));
 	            count++;
 	        }
 			br.close();
@@ -98,10 +102,12 @@ public class JNode {
 					if(newNode.length() < 4) {
 						newNode = "0" + newNode;
 					}
+					System.out.println(token[0] + "new Node is " + newNode);
 					node.get(newNode).setGroup(token[0]);
 				}
 			}
 			br.close();
+			br = null;
 		}	
 		catch(Exception e) {
 			e.printStackTrace();

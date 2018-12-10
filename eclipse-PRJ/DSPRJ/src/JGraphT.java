@@ -63,10 +63,13 @@ public class JGraphT {
 					}
 				}
 			}
+			br.close();
+			br = null;
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		//MAKE EDGE BETWEEN SAME ELEVATORS
 		HashMap<String, ArrayList<String>> elevMap = node.getElevNodes();
 		for(String elevKey: elevMap.keySet()) {
@@ -82,10 +85,13 @@ public class JGraphT {
 		HashMap<String, ArrayList<String>> stairMap = node.getStairNodes();
 		for(String stairKey: stairMap.keySet()) {
 			ArrayList<String> stairList = stairMap.get(stairKey);
+			int weight = 70;
 			for(int i = 0; i < stairList.size(); i++) {
+				weight += 30 * i;
 				for (int j = i + 1; j < stairList.size(); j++) {
 					DefaultEdge tmpEdge = undirectedGraph.addEdge(stairList.get(i), stairList.get(j));
-					undirectedGraph.setEdgeWeight(tmpEdge, 100);
+					undirectedGraph.setEdgeWeight(tmpEdge, weight);
+					weight += 30;
 				}
 			}
 		}
