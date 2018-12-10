@@ -1,16 +1,6 @@
 import java.util.ArrayList;
 
-// ToDo : Input Sensor Data
-// ToDo : Elevator Structure design Needed
-public class ElevatorNode extends NodeData{
-	public ElevatorNode(String idx, String name) {
-	      super(idx, name, 2);
-	      this.floor = new int[18];
-			for(int i=0; i<18; i++) {
-				this.floor[i] = 0;
-			}
-	   }
-	// private int curFloor;
+public class ElevatorNode{
 	private ArrayList<String> sharedFloor;
 	private int[] floor;
 	private String idx;
@@ -20,13 +10,19 @@ public class ElevatorNode extends NodeData{
 	private int people;
 	private int now;
 	private int dir;
-	private int user; //占쏙옙占쏙옙占쏙옙占� 占싸울옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙 EV占쏙옙占싶몌옙
+	private int user; //占쏙옙占쏙옙占쏙옙占� 占싸울옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙 EV占쏙옙占싶몌옙	
 	
-	public void setter(String idx, int nop, int direction, int nowFloor, int userNum) {
+	public ElevatorNode(String idx, String name) {
 		this.idx = idx;
 		this.name = name;
-		this.sharedFloor = new ArrayList<>();
-		
+	    this.floor = new int[18];
+		for(int i=0; i<18; i++) {
+			this.floor[i] = 0;
+		}
+		this.sharedFloor = new ArrayList<>();		
+	}
+	
+	public void setter(int nop, int direction, int nowFloor, int userNum) {
 		people = nop;
 		dir = direction;
 		now = nowFloor;
@@ -34,14 +30,14 @@ public class ElevatorNode extends NodeData{
 		if(people == 0) {
 	         stayT = 0;
 	         dir = 0;
-	      }
-	      else if(0 < people && people <11) {
+	         }
+	    else if(0 < people && people <11) {
 	         stayT = 15;
-	      }
-	      //20占쏙옙占싹띰옙占쏙옙 占싫몌옙占쏙옙鳴占� StayT占쏙옙 0占쏙옙 占싣니띰옙 占쏙옙占쏙옙摸占� 20占싱므뤄옙 stayT = 20
-	      else if(10 < people && people <=20) {
+	    }
+	    //20占쏙옙占싹띰옙占쏙옙 占싫몌옙占쏙옙鳴占� StayT占쏙옙 0占쏙옙 占싣니띰옙 占쏙옙占쏙옙摸占� 20占싱므뤄옙 stayT = 20
+	    else {
 	         stayT = 20;
-	      }	
+	    }	
 		
 	}
 	public void addNewFloor(String floor) {
@@ -112,23 +108,27 @@ public class ElevatorNode extends NodeData{
 		return sharedFloor;
 	}
 	
-	  public int topFloor(int []floor) {
-	      int top = 0;
-	      for(int i=0; i<18; i++) {
-	         if(floor[i] == 1)
-	            top = i;
-	      }
-	      return top;
-	   }
+	public int topFloor(int []floor) {
+		int top = 0;
+	    for(int i = 17; i >= 0; i--) {
+	       if(floor[i] == 1) {
+	    	   top = i;
+	    	   break;
+	       }
+	    }
+	    return top;
+	}
 	   
-	   public int botFloor(int []floor) {
-	      int bottom = 17;
-	      for(int i=17; i>-1; i--) {
-	         if(floor[i] == 1)
-	            bottom = i;
-	      }
-	      return bottom;
-	   }
+	public int botFloor(int []floor) {
+	    int bottom = 17;
+	    for(int i = 0; i < 18; i++) {
+	       if(floor[i] == 1) {
+	    	   bottom = i;
+	    	   break;
+	       }
+	    }
+	    return bottom;
+	}
 	   
 	   public int secTopFloor(int []floor) {
 	      int top = 0;

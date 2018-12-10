@@ -85,7 +85,7 @@ public class JGraphT {
 			for(int i = 0; i < stairList.size(); i++) {
 				for (int j = i + 1; j < stairList.size(); j++) {
 					DefaultEdge tmpEdge = undirectedGraph.addEdge(stairList.get(i), stairList.get(j));
-					undirectedGraph.setEdgeWeight(tmpEdge, 0);
+					undirectedGraph.setEdgeWeight(tmpEdge, 100);
 				}
 			}
 		}
@@ -101,8 +101,8 @@ public class JGraphT {
 			System.out.println("SOURCE : ");
 			msg = scan.nextLine();
 		}
-		
 		input.setStart(msg);
+		
 		msg = new String();
 		while(!node.isThisNodeExist(msg)) {
 			System.out.println("DEST : ");
@@ -110,32 +110,55 @@ public class JGraphT {
 		}
 		input.setDesti(msg);
 		
-		ElevatorNode []evArr = new ElevatorNode[12];
-		for(int i=0; i<12; i++) {
-			evArr[i] = new ElevatorNode(" ", " ");
+		// Set elevator node's basic data
+		int i = 0;
+		HashMap<String, ArrayList<String>> elevMap = node.getElevNodes();
+		for(String elevKey: elevMap.keySet()) {
+			ElevatorNode elevNode = node.getElevNodeByName(elevKey);
+			elevNode.setter(input.sensorPeople[i], input.sensorDir[i], input.sensorNow[i], input.userNum);
+			i++;
 		}
-		 evArr[0].setter("1", input.sensorPeople[0], input.sensorDir[0], input.sensorNow[0], input.userNum);
-		 evArr[1].setter("2", input.sensorPeople[1], input.sensorDir[1], input.sensorNow[1], input.userNum);
-		 evArr[2].setter("3", input.sensorPeople[2], input.sensorDir[2], input.sensorNow[2], input.userNum);
-		 evArr[3].setter("4", input.sensorPeople[3], input.sensorDir[3], input.sensorNow[3], input.userNum);
-		 evArr[4].setter("5", input.sensorPeople[4], input.sensorDir[4], input.sensorNow[4], input.userNum);
-		 evArr[5].setter("6", input.sensorPeople[5], input.sensorDir[5], input.sensorNow[5], input.userNum);
-		 evArr[6].setter("7", input.sensorPeople[6], input.sensorDir[6], input.sensorNow[6], input.userNum);
-		 evArr[7].setter("8", input.sensorPeople[7], input.sensorDir[7], input.sensorNow[7], input.userNum);
-		 evArr[8].setter("9", input.sensorPeople[8], input.sensorDir[8], input.sensorNow[8], input.userNum);
-		 evArr[9].setter("10", input.sensorPeople[9], input.sensorDir[9], input.sensorNow[9], input.userNum);
-		 evArr[10].setter("11", input.sensorPeople[10], input.sensorDir[10], input.sensorNow[10], input.userNum);
-		 evArr[11].setter("12", input.sensorPeople[11], input.sensorDir[11], input.sensorNow[11], input.userNum);
-		 
-		 verticalSetter vSet = new verticalSetter();
-		 vSet.evSetter(evArr, input.dFloor-input.sFloor);
+		
+		//Previous in the verticalSetter.java
+		int up_down = input.dFloor - input.sFloor;		
+		DefaultEdge tmpEdge;
+		for(String elevKey: elevMap.keySet()) {
+			ArrayList<String> elevList = elevMap.get(elevKey);
+			for(i = 0; i < elevList.size(); i++) {
+				for (int j = i + 1; j < elevList.size(); j++) {
+					String src = elevList.get(i);
+					String dst = elevList.get(j);
+					int sf = typeChanger(src);
+					int df = typeChanger(dst);
+					tmpEdge = undirectedGraph.getEdge(src, dst);
+					if (up_down > 0) {
+						undirectedGraph.setEdgeWeight(tmpEdge, node.getElevNodeByName(elevKey).weightGiver(sf, df));
+					}
+					else {
+						undirectedGraph.setEdgeWeight(tmpEdge, node.getElevNodeByName(elevKey).weightGiver(df, sf));
+					}
+
+				}
+			}
+		}
 		
 	    DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(undirectedGraph);
+	    System.out.println("SOURCE : " + input.Start + " / DEST : " + input.Desti);
 	    List<String> shortestPath = dijkstraShortestPath.getPath(input.Start, input.Desti).getVertexList();
 		for (String path: shortestPath) {
 			System.out.print(path + " -> ");
 		}
 		System.out.print("\n");
 		System.out.println("FINALLY : " + dijkstraShortestPath.getPathWeight(input.Start,  input.Desti));
+	}
+	private int typeChanger(String idx) {
+		int ret = 0;
+		if (idx.charAt(4) == 'B') {
+			ret = ret - Integer.valueOf(idx.charAt(5));
+		}
+		else {
+			ret = Integer.valueOf(idx.substring(4, 6));
+		}
+		return ret;
 	}
 }

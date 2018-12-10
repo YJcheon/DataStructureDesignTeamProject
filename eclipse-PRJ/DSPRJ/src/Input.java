@@ -76,11 +76,11 @@ public class Input {
 			sensorPeople[9] = (int)Math.random()*21;
 			for(int i =10;i<12;i++)
 				sensorPeople[i]= (int)(6+Math.random()*15);
-	}
+		}
 		else if(Calendar.MINUTE >= 10 && Calendar.MINUTE < 20) {
 			for(int i =0;i<12;i++)
 				sensorPeople[i]= (int)(Math.random()*21);
-	}
+		}
 		else if(Calendar.MINUTE >= 20 && Calendar.MINUTE < 30) {
 			for(int i =0;i<4;i++)
 				sensorPeople[i]= (int)(8+Math.random()*13);
@@ -90,11 +90,11 @@ public class Input {
 			sensorPeople[9] = (int)Math.random()*21;
 			for(int i =10;i<12;i++)
 				sensorPeople[i]= (int)(7+Math.random()*14);
-	}
+		}
 		else if(Calendar.MINUTE >= 30 && Calendar.MINUTE < 40) {
 			for(int i =0;i<12;i++)
 				sensorPeople[i]= (int)(Math.random()*21);
-	}
+		}
 		else if(Calendar.MINUTE >= 40 && Calendar.MINUTE < 50) {
 			for(int i =0;i<4;i++)
 				sensorPeople[i]= (int)(9+Math.random()*12);
@@ -104,7 +104,7 @@ public class Input {
 			sensorPeople[9] = (int)(7+Math.random()*14);
 			for(int i =10;i<12;i++)
 				sensorPeople[i]= (int)(8+Math.random()*13);
-	}
+		}
 		else if(Calendar.MINUTE >= 50 && Calendar.MINUTE < 60) {
 			for(int i =0;i<4;i++)
 				sensorPeople[i]= (int)(18+Math.random()*3);
@@ -114,9 +114,6 @@ public class Input {
 			sensorPeople[9] = (int)(8+Math.random()*13);
 			for(int i =10;i<12;i++)
 				sensorPeople[i]= (int)(14+Math.random()*7);
+		}
 	}
-	}
-	public void main(String[] args) {
-		SensorReceive();
-	}  
 }

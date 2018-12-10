@@ -112,6 +112,15 @@ public class JNode {
 		return node.keySet();
 	}
 	
+	// Return Specific Elevator Node
+	public ElevatorNode getElevNodeByName(String nodeIdx) {
+		return elevator.get(nodeIdx);
+	}
+	// Return Specific Elevator Node
+	public ElevatorNode getStairNodeByName(String nodeIdx) {
+		return stairs.get(nodeIdx);
+	}
+	
 	// Return Elevator Nodes
 	public HashMap<String, ArrayList<String>> getElevNodes() {
 		HashMap<String, ArrayList<String>> ret = new HashMap<>();
