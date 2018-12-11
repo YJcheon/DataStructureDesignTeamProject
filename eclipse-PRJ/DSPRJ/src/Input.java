@@ -71,55 +71,55 @@ public class Input {
             }
         }
         for(int i=0;i<12;i++)
-            sensorDir[i] = rnd.nextInt(3) - 1;
+            sensorDir[i] = 2*rnd.nextInt(2) - 1;
 
         if(currentMin >= 0 && currentMin < 10) {
             for(int i =0;i < 4;i++)
-                sensorPeople[i]= 8 + rnd.nextInt(13);
+                sensorPeople[i]= 7+userNum + rnd.nextInt(13);
             sensorPeople[4] = rnd.nextInt(21);
             for(int i =5;i<9;i++)
-                sensorPeople[i]= 8 + rnd.nextInt(13);
+                sensorPeople[i]= 7+userNum + rnd.nextInt(13);
             sensorPeople[9] = rnd.nextInt(21);
             for(int i =10;i<12;i++)
-                sensorPeople[i]= 6+rnd.nextInt(15);
+                sensorPeople[i]= 7+userNum +rnd.nextInt(15);
         }
         else if(currentMin >= 10 && currentMin < 20) {
             for(int i =0;i<12;i++)
-                sensorPeople[i]= rnd.nextInt(21);
+                sensorPeople[i]= userNum -1 + rnd.nextInt(21);
         }
         else if(currentMin >= 20 && currentMin < 30) {
             for(int i =0;i<4;i++)
-                sensorPeople[i]= 8+rnd.nextInt(13);
+                sensorPeople[i]= 7+userNum+rnd.nextInt(13);
             sensorPeople[4] = rnd.nextInt(21);
             for(int i =5;i<9;i++)
-                sensorPeople[i]= 8 + rnd.nextInt(13);
+                sensorPeople[i]= 7+userNum + rnd.nextInt(13);
             sensorPeople[9] = rnd.nextInt(21);
             for(int i =10;i<12;i++)
-                sensorPeople[i]= 7+rnd.nextInt(14);
+                sensorPeople[i]= 6+userNum+rnd.nextInt(14);
         }
         else if(currentMin >= 30 && currentMin < 40) {
             for(int i =0;i<12;i++)
-                sensorPeople[i]= rnd.nextInt(21);
+                sensorPeople[i]= userNum -1 + rnd.nextInt(21);
         }
         else if(currentMin >= 40 && currentMin < 50) {
             for(int i =0;i<4;i++)
-                sensorPeople[i]= 9+rnd.nextInt(12);
+                sensorPeople[i]= 9+userNum +rnd.nextInt(12);
             sensorPeople[4] = 7 + rnd.nextInt(14);
             for(int i =5;i<9;i++)
-                sensorPeople[i]= 9+rnd.nextInt(12);
+                sensorPeople[i]= 8+userNum +rnd.nextInt(12);
             sensorPeople[9] = rnd.nextInt(14);
             for(int i =10;i<12;i++)
-                sensorPeople[i]= 8+rnd.nextInt(13);
+                sensorPeople[i]= 7+ userNum +rnd.nextInt(13);
         }
         else if(currentMin >= 50 && currentMin < 60) {
             for(int i =0;i<4;i++)
-                sensorPeople[i]= 18 + rnd.nextInt(3);
-            sensorPeople[4] = 8 + rnd.nextInt(13);
+                sensorPeople[i]= 17+ userNum + rnd.nextInt(3);
+            sensorPeople[4] = 7+ userNum + rnd.nextInt(13);
             for(int i =5;i<9;i++)
-                sensorPeople[i]= 18 + rnd.nextInt(3);
-            sensorPeople[9] = 8 + rnd.nextInt(13);
+                sensorPeople[i]= 17+ userNum + rnd.nextInt(3);
+            sensorPeople[9] = 7+ userNum + rnd.nextInt(13);
             for(int i =10;i<12;i++)
-                sensorPeople[i]= 14+rnd.nextInt(7);
+                sensorPeople[i]= 13+ userNum+rnd.nextInt(7);
         }
     }
 }
