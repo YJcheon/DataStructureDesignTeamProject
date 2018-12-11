@@ -22,7 +22,7 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 //		: Run Shortest Path Algorithms - Till 12/03
 
 public class JGraphT {
-	Input input= new Input();
+	Input input= new Input(0);
 	private static JNode node;
 	private static ArrayList<DefaultWeightedEdge> edges;
 	static DefaultUndirectedWeightedGraph<String, DefaultEdge> undirectedGraph;
@@ -39,7 +39,6 @@ public class JGraphT {
 			undirectedGraph.addVertex(keyName);
 			count++;
 		}
-		System.out.println("total " + String.valueOf(count) + "node added");
 		
 		//EDGE CREATION
 		BufferedReader br;
@@ -59,7 +58,6 @@ public class JGraphT {
 					for (String destIdx : node.getNodesByGroup(destGroup)) {
 						DefaultEdge tmpEdge = undirectedGraph.addEdge(sourceIdx, destIdx);
 						undirectedGraph.setEdgeWeight(tmpEdge, thisWeight);
-						System.out.println("SOURCE : " + sourceIdx + "/ DEST : " + destIdx + "/ WEIGHT : " + thisWeight);
 					}
 				}
 			}
@@ -85,9 +83,8 @@ public class JGraphT {
 		HashMap<String, ArrayList<String>> stairMap = node.getStairNodes();
 		for(String stairKey: stairMap.keySet()) {
 			ArrayList<String> stairList = stairMap.get(stairKey);
-			int weight = 70;
 			for(int i = 0; i < stairList.size(); i++) {
-				weight += 30 * i;
+				int weight = 70 + 30 * i;
 				for (int j = i + 1; j < stairList.size(); j++) {
 					DefaultEdge tmpEdge = undirectedGraph.addEdge(stairList.get(i), stairList.get(j));
 					undirectedGraph.setEdgeWeight(tmpEdge, weight);
@@ -115,39 +112,42 @@ public class JGraphT {
 			msg = scan.nextLine();
 		}
 		input.setDesti(msg);
-		
-		// Set elevator node's basic data
-		int i = 0;
-		HashMap<String, ArrayList<String>> elevMap = node.getElevNodes();
-		for(String elevKey: elevMap.keySet()) {
-			ElevatorNode elevNode = node.getElevNodeByName(elevKey);
-			elevNode.setter(input.sensorPeople[i], input.sensorDir[i], input.sensorNow[i], input.userNum);
-			i++;
-		}
-		
-		//Previous in the verticalSetter.java
-		int up_down = input.dFloor - input.sFloor;		
-		DefaultEdge tmpEdge;
-		for(String elevKey: elevMap.keySet()) {
-			ArrayList<String> elevList = elevMap.get(elevKey);
-			for(i = 0; i < elevList.size(); i++) {
-				for (int j = i + 1; j < elevList.size(); j++) {
-					String src = elevList.get(i);
-					String dst = elevList.get(j);
-					int sf = typeChanger(src);
-					int df = typeChanger(dst);
-					tmpEdge = undirectedGraph.getEdge(src, dst);
-					if (up_down > 0) {
-						undirectedGraph.setEdgeWeight(tmpEdge, node.getElevNodeByName(elevKey).weightGiver(sf, df));
-					}
-					else {
-						undirectedGraph.setEdgeWeight(tmpEdge, node.getElevNodeByName(elevKey).weightGiver(df, sf));
-					}
+        //input value control part
+		input.setUserNum(1);
+        input.setBusy("0");
+        
+        // Set elevator node's basic data
+        HashMap<String, ArrayList<String>> elevMap = node.getElevNodes();
+        for(String elevKey: elevMap.keySet()) {
+            ElevatorNode elevNode = node.getElevNodeByName(elevKey);
+            int i = typeChanger(elevNode.getIdx());
+            if ( i < 0 ) i = i + 6;
+            else i = i + 5;
+            elevNode.setter(input.sensorPeople[i], input.sensorDir[i], input.sensorNow[i], input.userNum);
 
-				}
-			}
-		}
-		
+        }
+
+        //Previous in the verticalSetter.java
+        int up_down = input.dFloor - input.sFloor;
+        DefaultEdge tmpEdge;
+        for(String elevKey: elevMap.keySet()) {
+            ArrayList<String> elevList = elevMap.get(elevKey);
+            for(int i = 0; i < elevList.size(); i++) {
+                String src = elevList.get(i);
+                for (int j = i + 1; j < elevList.size(); j++) {
+                    String dst = elevList.get(j);
+                    int sf = typeChanger(src);
+                    int df = typeChanger(dst);
+                    tmpEdge = undirectedGraph.getEdge(src, dst);
+                    if (up_down > 0) {
+                        undirectedGraph.setEdgeWeight(tmpEdge, node.getElevNodeByName(elevKey).weightGiver(sf, df));
+                    }
+                    else {
+                        undirectedGraph.setEdgeWeight(tmpEdge, node.getElevNodeByName(elevKey).weightGiver(df, sf));
+                    }
+                }
+            }
+        }		
 	    DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(undirectedGraph);
 	    System.out.println("SOURCE : " + input.Start + " / DEST : " + input.Desti);
 	    List<String> shortestPath = dijkstraShortestPath.getPath(input.Start, input.Desti).getVertexList();
@@ -157,14 +157,15 @@ public class JGraphT {
 		System.out.print("\n");
 		System.out.println("FINALLY : " + dijkstraShortestPath.getPathWeight(input.Start,  input.Desti));
 	}
-	private int typeChanger(String idx) {
-		int ret = 0;
-		if (idx.charAt(4) == 'B') {
-			ret = ret - Integer.valueOf(idx.charAt(5));
-		}
-		else {
-			ret = Integer.valueOf(idx.substring(4, 6));
-		}
-		return ret;
-	}
+    private int typeChanger(String idx) {
+        int ret = 0;
+        int len = idx.length();
+        if (idx.charAt(len - 2) == 'B') {
+            ret = ret - Integer.valueOf(idx.charAt(len - 1)) + 48;
+        }
+        else {
+            ret = Integer.valueOf(idx.substring(len - 2, len));
+        }
+        return ret;
+    }
 }
