@@ -113,7 +113,9 @@ public class JNode {
     public Set getNodesKey(){
         return node.keySet();
     }
-
+    public boolean isNodeKeyExist(String nodeKey) {
+        return node.containsKey(nodeKey);
+    }
     // Return node keys + node name
     public ArrayList<String> getNodesKeyName() {
         ArrayList<String> ret = new ArrayList<>();

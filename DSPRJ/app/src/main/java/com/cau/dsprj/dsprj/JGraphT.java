@@ -100,7 +100,9 @@ public class JGraphT{
                     if (nodeKey.length() < 4) {
                         nodeKey = "0" + nodeKey;
                     }
-                    node.setNodePosition(nodeKey, posX, posY);
+                    if (node.isNodeKeyExist(nodeKey)){
+                        node.setNodePosition(nodeKey, posX, posY);
+                    }
                 }
             }
             br.close();
