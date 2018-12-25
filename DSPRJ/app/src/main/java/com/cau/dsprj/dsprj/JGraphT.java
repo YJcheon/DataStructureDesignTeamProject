@@ -88,6 +88,26 @@ public class JGraphT{
                 }
             }
         }
+        try{
+            br = new BufferedReader(new InputStreamReader(context.getAssets().open("node1.txt")));
+            line = "";
+            while((line = br.readLine()) != null){
+                String[] array = line.split(" ");
+                int posX = Integer.valueOf(array[0]);
+                int posY = Integer.valueOf(array[1]);
+                for(int i = 2; i < array.length; i++) {
+                    String nodeKey = array[i];
+                    if (nodeKey.length() < 4) {
+                        nodeKey = "0" + nodeKey;
+                    }
+                    node.setNodePosition(nodeKey, posX, posY);
+                }
+            }
+            br.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     public ArrayList<String> getShortestPath(String source, String dest, int userNum, String busy){
         ArrayList<String> paths;
@@ -143,19 +163,11 @@ public class JGraphT{
         dijkstraShortestPath = new DijkstraShortestPath(undirectedGraph);
         paths = (ArrayList<String>) dijkstraShortestPath.getPath(source, dest).getVertexList();
 
-        int total = 0;
-        String before = source;
         for (String path: paths) {
-            ret.add(path);
-            ret.add(node.getNodeName(path));
-            if (ret.size() > 2){
-                int curWeight = (int)undirectedGraph.getEdgeWeight(undirectedGraph.getEdge(before, path));
-                total += curWeight;
-                ret.add(String.valueOf(curWeight));
-            }
-            before = path;
+            String retValue = "";
+            retValue = path + "_" + node.getNodeName(path) + "_" + node.getNodePosition(path);
+            ret.add(retValue);
         }
-        ret.add(String.valueOf(total));
         return ret;
     }
 
