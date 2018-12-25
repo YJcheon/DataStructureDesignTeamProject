@@ -28,6 +28,7 @@ public class ResultActivity extends AppCompatActivity {
     ArrayList<String> resultPosX;
     ArrayList<String> resultPosY;
     ListView listView;
+
     myview myView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,25 +51,32 @@ public class ResultActivity extends AppCompatActivity {
             resultPosX.add(token[2]);
             resultPosY.add(token[3]);
         }
-        String header = resultPath.get(0).split("_")[0].substring(0,2);
-        if (header.equals("ST") || header.equals("EV")) {
-            header = resultPath.get(0).split("_")[0].substring(4, 6);
-        }
-        String firstPlace = "f" + header.toLowerCase() + "th";
+
         myView = findViewById(R.id.MyView);
-        myView.setBackground(getDrawable(getResources().getIdentifier(firstPlace,"drawable",getPackageName())));
-        myView.drawDot(resultPosX.get(0), resultPosY.get(0));
+        try{
+            String header = resultPath.get(0).split("_")[0];
+            if (header.substring(0,0).equals('0') ||  header.substring(0,0).equals('1')) {
+                header = "f" + header;
+            }
+            myView.setBackground(getDrawable(getResources().getIdentifier(header.toLowerCase(),"drawable",getPackageName())));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String header = resultKey.get(position).substring(0, 2);
-                if (header.equals("ST") || header.equals("EV")) {
-                    header = resultKey.get(position).substring(4, 6);
+                try{
+                    String header = resultKey.get(position);
+                    if (header.substring(0,0).equals('0') ||  header.substring(0,0).equals('1')) {
+                        header = "f" + header;
+                    }
+                    myView.setBackground(getDrawable(getResources().getIdentifier(header.toLowerCase(),"drawable",getPackageName())));
                 }
-                String floor = "f" + header.toLowerCase() + "th";
-                Log.d("DEBUG", floor + " / posX : " + resultPosX.get(position));
-                myView.setBackground(getDrawable(getResources().getIdentifier(floor,"drawable",getPackageName())));
-                myView.drawDot(resultPosX.get(position), resultPosY.get(position));
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -97,11 +105,6 @@ class myview extends View {
     }
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawPoint(posX, posY, dot);
-    }
-    public void drawDot(String posX, String posY) {
-        this.posX = Float.valueOf(posX);
-        this.posY = Float.valueOf(posY);
-        invalidate();
+
     }
 }
