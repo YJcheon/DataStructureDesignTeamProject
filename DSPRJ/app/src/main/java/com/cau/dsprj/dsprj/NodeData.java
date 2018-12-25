@@ -5,9 +5,8 @@ public class NodeData {
     private String nodeName;
     private int nodeType;
     private String nodeGroup;
-    //Will be Added later
-    //private int nodeX;
-    //private int nodeY;
+    private int nodeX;
+    private int nodeY;
     public NodeData(String idx, int type) {
         nodeIdx = new String(idx);
         nodeName = new String(idx);
@@ -34,5 +33,11 @@ public class NodeData {
     }
     public void setGroup(String nodeGroup) {
         this.nodeGroup = nodeGroup;
+    }
+    public void setPosX(int posX) { this.nodeX = posX; }
+    public void setPosY(int posY) { this.nodeY = posY; }
+    public String getPosition() {
+        String ret = String.valueOf(nodeX) + "_" + String.valueOf(nodeY);
+        return ret;
     }
 }

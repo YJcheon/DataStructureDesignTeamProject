@@ -41,7 +41,6 @@ public class SearchActivity extends AppCompatActivity {
             tmp = reader.readLine(); // Read Header
             while ((tmp = reader.readLine()) != null ) {
                 Token = tmp.split(",");
-                Log.d("STRING", tmp);
                 adapter.addItem(ContextCompat.getDrawable(this, R.drawable.play_button),
                         Token[0], Token[1]);
             }

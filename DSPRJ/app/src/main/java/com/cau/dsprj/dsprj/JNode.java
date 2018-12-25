@@ -102,11 +102,20 @@ public class JNode {
             e.printStackTrace();
         }
     }
+    public void setNodePosition(String nodeKey, int posx, int posy) {
+        node.get(nodeKey).setPosX(posx);
+        node.get(nodeKey).setPosY(posy);
+    }
+    public String getNodePosition(String nodeKey) {
+        return node.get(nodeKey).getPosition();
+    }
     // Return All Nodes Set
     public Set getNodesKey(){
         return node.keySet();
     }
-
+    public boolean isNodeKeyExist(String nodeKey) {
+        return node.containsKey(nodeKey);
+    }
     // Return node keys + node name
     public ArrayList<String> getNodesKeyName() {
         ArrayList<String> ret = new ArrayList<>();
